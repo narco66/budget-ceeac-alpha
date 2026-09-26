@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'DM Serif Display', Georgia, serif;
+  --color-navy-950: #050f20;
+  --color-navy-900: #0b1c3e;
+  --color-navy-800: #132654;
+  --color-navy-500: #2b50a8;
+  --color-ceeac-700: #1a6b3a;
+  --color-gold-500: #d4a017;
+  --color-canvas: #f0f4fa;
+  --color-ink: #1e2a42;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+:focus-visible {
+  outline: 2px solid #2b50a8;
+  outline-offset: 2px;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}

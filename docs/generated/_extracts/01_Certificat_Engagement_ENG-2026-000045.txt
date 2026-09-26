@@ -1,0 +1,91 @@
+PAGES: 1
+
+
+--- PAGE 1 ---
+COMMISSION DE LA CEEAC
+Communauté Économique des États de l'Afrique Centrale
+Gestion de la Chaîne de la Dépense et de Suivi
+GESBUDEP
+Code rapport :
+RPT-CERT-ENG-001
+Date d'édition :
+12/06/2026 12:20
+Exercice :
+2026
+Page :
+1 / 4
+CERTIFICAT D'ENGAGEMENT
+ EXERCICE BUDGÉTAIRE 2026
+N° ENGAGEMENT : ENG-2026-000045
+Référence de réservation : RES-2026-000123
+VALIDÉ
+INFORMATIONS GÉNÉRALES ET OBJET
+Structure
+DSI - Direction des Systèmes
+d'Information
+Source de financement
+Ressources propres CEEAC
+Exercice
+2026
+Date d'engagement
+12/06/2026
+Tiers contractant
+HP Africa (F-2026-0157)
+Nature du contrat
+Bon de commande
+N° contrat / BC
+BC-2026-0217
+Date du contrat
+12/06/2026
+Délai d'exécution
+30 jours
+Statut
+Validé et certifié
+Objet de la dépense :
+Acquisition de 20 ordinateurs portables et 5 imprimantes multifonctions pour le renouvellement du parc
+informatique.
+IMPUTATION BUDGÉTAIRE ET LIEN PAP
+Chapitre
+2 - DÉPENSES DE FONCTIONNEMENT
+Article
+2.2 - ACHATS DE BIENS ET SERVICES
+Paragraphe
+2.2.1 - Achats de fournitures et consommables
+Ligne budgétaire
+2.2.1.2 - Matériel informatique et bureautique
+Activité PAP
+A2.1 - Renforcement des équipements et systèmes
+Tâche PAP
+A2.1.1 - Acquisition d'équipements informatiques
+SITUATION FINANCIÈRE (FCFA)
+Crédit initial
+45 000 000
+Disponible avant réservation
+17 600 000
+Montant réservé
+15 000 000
+Montant engagé
+15 000 000
+Disponible après
+engagement
+2 600 000
+CERTIFICATION
+Le présent certificat atteste que la dépense décrite ci-dessus a fait l'objet d'une réservation budgétaire, d'un engagement
+juridique et d'un engagement comptable régulièrement validés. Le montant engagé est de 15 000 000 FCFA (Quinze millions de
+francs CFA). Les crédits correspondants sont définitivement affectés sur la ligne budgétaire indiquée, sous réserve de la
+constatation du service fait et des contrôles ultérieurs de liquidation.
+Contrôle Financier
+Validé électroniquement
+ Marie NKODO
+12/06/2026 11:40
+Agent Comptable
+Validé électroniquement
+ Jean MBENG
+12/06/2026 11:25
+Ordonnateur Principal
+Validé électroniquement
+ Pierre NTAMA
+12/06/2026 12:05
+Document officiel - GESBUDEP
+Commission de la CEEAC - Version électronique vérifiable
+Page 1/4
