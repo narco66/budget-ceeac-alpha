@@ -46,6 +46,33 @@ class DocumentService
         return $document->refresh();
     }
 
+    public function beginOfficial(User $author, string $title, string $category): GedDocument
+    {
+        return GedDocument::query()->create([
+            'title' => $title,
+            'category' => $category,
+            'mime' => 'application/pdf',
+            'byte_size' => 0,
+            'sha256' => str_repeat('0', 64),
+            'confidentiality' => 'internal',
+            'status' => 'draft',
+            'author_id' => $author->id,
+        ]);
+    }
+
+    public function finishOfficial(GedDocument $document, User $author, string $contents): GedDocument
+    {
+        $hash = hash('sha256', $contents);
+        $this->writeVersion($document, $author, $contents, $hash, 1);
+        $document->update([
+            'byte_size' => strlen($contents),
+            'sha256' => $hash,
+            'status' => 'sealed',
+        ]);
+
+        return $document->refresh();
+    }
+
     public function seal(GedDocument $document): GedDocument
     {
         $this->assertMutable($document);

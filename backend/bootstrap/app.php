@@ -12,6 +12,7 @@ use App\Exceptions\OrdonnancementRuleException;
 use App\Exceptions\PartyRuleException;
 use App\Exceptions\PaymentRuleException;
 use App\Http\Middleware\EnsurePermission;
+use App\Http\Middleware\SecurityHeaders;
 use App\Support\ApiResponse;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Auth\AuthenticationException;
@@ -33,6 +34,7 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
+        $middleware->append(SecurityHeaders::class);
         $middleware->alias([
             'permission' => EnsurePermission::class,
         ]);

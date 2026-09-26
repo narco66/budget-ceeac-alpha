@@ -44,7 +44,7 @@ class OrdonnancementApiTest extends TestCase
             ->assertJsonPath('data.threshold_amount_xaf', '5000000')
             ->assertJsonPath('data.threshold_version', 1)
             ->assertJsonPath('data.beneficiary_label', 'Atelier central')
-            ->assertJsonPath('data.official_pdf', null);
+            ->assertJsonPath('data.official_documents', []);
 
         Sanctum::actingAs($this->userWith('president'));
         $this->postJson('/api/v1/payment-orders/'.$orderId.'/transitions', ['action' => 'sign'])
@@ -98,7 +98,7 @@ class OrdonnancementApiTest extends TestCase
             ->assertOk()
             ->assertJsonPath('data.status', 'transmitted')
             ->assertJsonPath('data.authorizer_role_code', 'president')
-            ->assertJsonPath('data.official_pdf', null);
+            ->assertJsonPath('data.official_documents.0.kind', 'ord_ordre');
     }
 
     public function test_a_reduced_amount_changes_the_authorizer_and_a_partial_cannot_exceed_the_liquidation(): void

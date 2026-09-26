@@ -21,6 +21,9 @@ La vérité métier est le cahier des charges v5.0 du 26 septembre 2026 (`docs/`
 | 10 Paiement | Virement, chèque ou caisse après prise en charge. Preuve exigée à l’exécution. Un rejet ne compte pas comme payé. L’écran local est vide. |
 | 11 Transversal | Tiers, contrats, GED, notifications et observations. Aucun seuil de marché, aucun indicateur GAR/RBM et aucune trésorerie ne sont inventés. Les écrans locaux sont vides. |
 | 12 Tableaux de bord | Indicateurs calculés sur les écritures du périmètre. Sans crédit exécutoire, le taux n’est pas calculé. Le Budget 2026 n’est pas recopié. |
+| 13 PDF | Fiche EB, bon, certificat, attestation, état de liquidation, ordre de paiement et avis de paiement, scellés une fois dans la GED. |
+| 14 Tests globaux | Suite PHPUnit, tests Vitest, et Playwright sur les refus de connexion et les écrans vides. La concurrence parallèle attend PostgreSQL. |
+| 15 Optimisation | Index de lecture, listes groupées, en-têtes de sécurité, lien clavier vers le contenu, file pour les notifications. |
 
 Le détail est dans `docs/generated/IMPLEMENTATION_STATUS.md`.
 
@@ -59,7 +62,10 @@ Avec PostgreSQL installé, créer la base `gesbudep`, aligner `DB_*` sur `.env.e
 php artisan migrate
 php artisan db:seed
 php artisan serve
+php artisan queue:work
 ```
+
+`queue:work` délivre les notifications nées des tâches ouvertes. Les échecs restent dans `failed_jobs`. Les actes financiers et leurs PDF ne passent pas par cette file.
 
 Santé : `GET http://localhost:8000/api/v1/health`  
 Connexion : `POST http://localhost:8000/api/v1/auth/login` avec `email` et `password`.
@@ -73,6 +79,16 @@ npm run dev
 ```
 
 L’interface est servie sur `http://127.0.0.1:5173` et appelle l’API via le préfixe `/api`.
+
+Les tests unitaires et le parcours navigateur, API et Vite déjà lancés :
+
+```bash
+npm test
+npx playwright install chromium
+npm run test:e2e
+```
+
+Le parcours connecté lit `GESBUDEP_ADMIN_EMAIL` et `GESBUDEP_ADMIN_PASSWORD` dans `backend/.env`. Ces valeurs ne sont pas écrites dans les tests.
 
 ## Documents de pilotage
 

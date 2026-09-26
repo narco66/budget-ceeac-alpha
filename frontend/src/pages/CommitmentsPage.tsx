@@ -51,7 +51,7 @@ export function CommitmentsPage() {
       {query.data && query.data.data.length === 0 && (
         <EmptyState
           title="Aucun engagement"
-          description="Aucun dossier n’est en instruction. La réservation et l’engagement ferme apparaîtront ici à partir d’expressions de besoin validées. Aucun montant n’est simulé."
+          description="Aucun dossier n’est en instruction. Le bon et le certificat d’engagement sont archivés au visa du contrôleur financier. Aucun montant n’est simulé."
         />
       )}
       {query.data && query.data.data.length > 0 && (

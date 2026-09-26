@@ -2,17 +2,23 @@
 
 namespace App\Http\Controllers\Api\V1;
 
+use App\Domain\Expenditure\ChainListPreloader;
 use App\Domain\Expenditure\OrdonnancementService;
 use App\Http\Controllers\Controller;
 use App\Models\Liquidation;
 use App\Models\PaymentOrder;
 use App\Support\ApiResponse;
+use App\Support\OfficialDocumentPayload;
+use App\Support\WorkflowCursor;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class PaymentOrderController extends Controller
 {
-    public function __construct(private readonly OrdonnancementService $orders) {}
+    public function __construct(
+        private readonly OrdonnancementService $orders,
+        private readonly ChainListPreloader $lists,
+    ) {}
 
     public function index(): JsonResponse
     {
@@ -20,6 +26,7 @@ class PaymentOrderController extends Controller
             ->with(['liquidation', 'workflow.currentStep', 'payments'])
             ->orderByDesc('created_at')
             ->get();
+        $this->lists->orders($rows);
 
         return ApiResponse::success(
             $rows->map(fn (PaymentOrder $order): array => $this->payload($order))->values(),
@@ -76,7 +83,7 @@ class PaymentOrderController extends Controller
     {
         $figures = $this->orders->figures($order);
         $step = $order->workflow?->currentStep;
-        $last = $order->workflow?->events()->latest('created_at')->first();
+        $last = WorkflowCursor::last($order->workflow);
 
         return [
             'id' => $order->id,
@@ -90,7 +97,7 @@ class PaymentOrderController extends Controller
             'threshold_version' => $order->threshold_version,
             'signed_on' => $order->signed_on?->toDateString(),
             'remainder_xaf' => $figures['remainder_xaf'],
-            'official_pdf' => null,
+            'official_documents' => OfficialDocumentPayload::for($order),
             'liquidation' => $order->relationLoaded('liquidation') && $order->liquidation !== null ? [
                 'id' => $order->liquidation->id,
                 'reference' => $order->liquidation->reference,

@@ -15,3 +15,6 @@
 - Paiements : préparation par le comptable, contrôle du chef comptable, autorisation et exécution par l’agent comptable, en virement, chèque ou caisse. La preuve est exigée. Un rejet libère le solde sans réutiliser la référence d’instrument.
 - Transversal : fiche tiers et comptes bancaires activés par une autre personne, contrats et avenants sans dépense rattachée, GED à empreinte SHA-256, notifications déduites des tâches, observations de contrôle. Les seuils de marchés, le suivi-évaluation, le Gantt et la trésorerie restent vides.
 - Tableaux de bord : révisé, engagé, liquidé, ordonnancé, payé et disponible calculés sur les écritures du périmètre. Le taux est un quotient entier, absent si le révisé est nul.
+- PDF officiels : produits à la validation de l’acte, scellés dans la GED, téléchargeables, sans régénération sous le même identifiant.
+- Tests globaux : suite PHPUnit, tests Vitest, refus de connexion et parcours des écrans vides sous Playwright. Le verrou concurrent n’est pas déclaré concluant sur SQLite.
+- Optimisation : index de lecture, listes sans relecture ligne à ligne, en-têtes de sécurité, lien clavier vers le contenu, notifications déposées dans la file.

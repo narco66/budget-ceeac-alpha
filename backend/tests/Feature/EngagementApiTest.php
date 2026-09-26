@@ -53,7 +53,8 @@ class EngagementApiTest extends TestCase
             ->assertJsonPath('data.reserved_xaf', '0')
             ->assertJsonPath('data.committed_xaf', '10000')
             ->assertJsonPath('data.liquidations.0.status', 'in_preparation')
-            ->assertJsonPath('data.official_pdf', null);
+            ->assertJsonPath('data.official_documents.0.kind', 'eng_bon')
+            ->assertJsonPath('data.official_documents.1.kind', 'eng_certificat');
 
         $this->postJson('/api/v1/commitments/'.$commitmentId.'/transitions', ['action' => 'visa'])
             ->assertStatus(422);

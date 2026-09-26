@@ -30,7 +30,7 @@ export function DocumentsPage() {
       {query.data && query.data.data.length === 0 && (
         <EmptyState
           title="Aucun document versé"
-          description="Chaque pièce conserve son empreinte SHA-256. Un document scellé ne se remplace pas. Aucun PDF officiel n’est généré à cette étape."
+          description="Chaque pièce conserve son empreinte SHA-256. Un document scellé ne se remplace pas. Les PDF officiels de la chaîne y sont versés à la validation : aucun acte n’a encore été validé."
         />
       )}
       {query.data && query.data.data.length > 0 && (

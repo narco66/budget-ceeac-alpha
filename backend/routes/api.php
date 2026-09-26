@@ -157,6 +157,7 @@ Route::prefix('v1')->group(function (): void {
         Route::middleware('permission:documents.view')->group(function (): void {
             Route::get('documents', [DocumentController::class, 'index']);
         });
+        Route::get('documents/{document}/file', [DocumentController::class, 'file']);
 
         Route::middleware('permission:documents.manage')->group(function (): void {
             Route::post('documents', [DocumentController::class, 'store']);

@@ -39,7 +39,7 @@ export function LiquidationsPage() {
       {query.data && query.data.data.length === 0 && (
         <EmptyState
           title="Aucune liquidation"
-          description="Aucun engagement visé n’a ouvert de dossier. Les factures, retenues et certifications apparaîtront ici. Aucun montant n’est simulé."
+          description="Aucun engagement visé n’a ouvert de dossier. L’attestation de service fait et l’état de liquidation sont archivés à la certification et au visa. Aucun montant n’est simulé."
         />
       )}
       {query.data && query.data.data.length > 0 && (

@@ -3,6 +3,7 @@
 namespace App\Domain\Expenditure;
 
 use App\Domain\Budget\BudgetBalance;
+use App\Domain\Documents\OfficialPdfPublisher;
 use App\Domain\Identity\SegregationOfDuties;
 use App\Domain\Money\IntegerAmount;
 use App\Domain\Referentials\NumberSequenceAllocator;
@@ -29,6 +30,7 @@ class NeedRequestService
         private readonly BudgetBalance $balance,
         private readonly SegregationOfDuties $segregation,
         private readonly CommitmentFromNeed $commitments,
+        private readonly OfficialPdfPublisher $pdfs,
     ) {}
 
     /**
@@ -168,6 +170,7 @@ class NeedRequestService
                 $this->commitments->generate($locked->refresh());
                 $locked->update(['status' => 'validated']);
                 $instance->update(['status' => 'closed']);
+                $this->pdfs->publish($user, $locked->refresh(), 'eb_fiche', 'Fiche EB '.$locked->reference);
             } elseif ($action === 'return') {
                 $locked->update(['status' => 'returned']);
                 $this->openTask($locked, $instance, $target);

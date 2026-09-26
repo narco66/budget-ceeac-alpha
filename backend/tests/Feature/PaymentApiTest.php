@@ -49,7 +49,7 @@ class PaymentApiTest extends TestCase
             ->assertOk()
             ->assertJsonPath('data.mode', 'virement')
             ->assertJsonPath('data.beneficiary_label', 'Atelier central')
-            ->assertJsonPath('data.official_pdf', null);
+            ->assertJsonPath('data.official_documents', []);
 
         $this->postJson('/api/v1/payments/'.$paymentId.'/amount', ['amount_xaf' => '4000'])
             ->assertOk()
@@ -100,7 +100,7 @@ class PaymentApiTest extends TestCase
             ->assertJsonPath('data.status', 'executed')
             ->assertJsonPath('data.paid_xaf', '4000')
             ->assertJsonPath('data.remainder_xaf', '0')
-            ->assertJsonPath('data.official_pdf', null);
+            ->assertJsonPath('data.official_documents.0.kind', 'pai_avis');
         $this->postJson('/api/v1/payments/'.$paymentId.'/transitions', ['action' => 'execute'])->assertStatus(422);
     }
 

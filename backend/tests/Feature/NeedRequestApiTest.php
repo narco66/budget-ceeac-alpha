@@ -92,10 +92,19 @@ class NeedRequestApiTest extends TestCase
             ->assertJsonPath('data.status', 'validated')
             ->assertJsonPath('data.commitment.status', 'in_instruction')
             ->assertJsonPath('data.commitment.reference', 'ENG-2026-000001')
-            ->assertJsonPath('data.official_pdf', null);
+            ->assertJsonPath('data.official_documents.0.kind', 'eb_fiche')
+            ->assertJsonCount(1, 'data.official_documents');
 
         $this->postJson('/api/v1/need-requests/'.$id.'/transitions', ['action' => 'sign'])
             ->assertStatus(422);
+
+        $documentId = $signed->json('data.official_documents.0.document_id');
+        $file = $this->get('/api/v1/documents/'.$documentId.'/file')->assertOk();
+        $this->assertStringStartsWith('%PDF', $file->getContent());
+        $this->assertSame(
+            hash('sha256', $file->getContent()),
+            $signed->json('data.official_documents.0.sha256'),
+        );
 
         $need = NeedRequest::query()->findOrFail($id);
         $generator = app(CommitmentFromNeed::class);

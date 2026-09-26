@@ -2,17 +2,23 @@
 
 namespace App\Http\Controllers\Api\V1;
 
+use App\Domain\Expenditure\ChainListPreloader;
 use App\Domain\Expenditure\NeedRequestService;
 use App\Http\Controllers\Controller;
 use App\Models\NeedRequest;
 use App\Models\Task;
 use App\Support\ApiResponse;
+use App\Support\OfficialDocumentPayload;
+use App\Support\WorkflowCursor;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class NeedRequestController extends Controller
 {
-    public function __construct(private readonly NeedRequestService $needs) {}
+    public function __construct(
+        private readonly NeedRequestService $needs,
+        private readonly ChainListPreloader $lists,
+    ) {}
 
     public function readiness(Request $request): JsonResponse
     {
@@ -28,6 +34,7 @@ class NeedRequestController extends Controller
             ->with(['workflow.currentStep', 'commitment'])
             ->orderByDesc('created_at')
             ->get();
+        $this->lists->needRequests($requests);
 
         return ApiResponse::success(
             $requests->map(fn (NeedRequest $need): array => $this->payload($need))->values(),
@@ -121,7 +128,7 @@ class NeedRequestController extends Controller
     private function payload(NeedRequest $need, bool $detailed = false): array
     {
         $step = $need->workflow?->currentStep;
-        $last = $need->workflow?->events()->latest('created_at')->first();
+        $last = WorkflowCursor::last($need->workflow);
 
         $payload = [
             'id' => $need->id,
@@ -134,7 +141,7 @@ class NeedRequestController extends Controller
             'amount_xaf' => (string) $need->amount_xaf,
             'need_on' => $need->need_on?->toDateString(),
             'program_chain' => null,
-            'official_pdf' => null,
+            'official_documents' => OfficialDocumentPayload::for($need),
             'commitment' => $need->relationLoaded('commitment') && $need->commitment !== null ? [
                 'id' => $need->commitment->id,
                 'reference' => $need->commitment->reference,

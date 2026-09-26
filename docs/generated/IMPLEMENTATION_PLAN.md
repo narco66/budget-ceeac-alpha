@@ -117,15 +117,15 @@ Fait : indicateurs calculés sur les écritures du périmètre (Commission ou st
 
 ### Phase 13 — PDF
 
-Fiche EB, bon et certificat d’engagement, état de liquidation, ordre de paiement, avis de paiement. Logo, référence, hash, archivage GED.
+Fait : fiche EB, bon et certificat d’engagement, attestation de service fait, état de liquidation, ordre de paiement signé, avis de paiement. Chaque pièce est produite une fois à l’événement, scellée dans la GED, avec empreinte SHA-256. Pas de QR. Pas de procès-verbal inventé. Les états de clôture restent ouverts.
 
 ### Phase 14 — Tests globaux
 
-`php artisan test`, tests frontend, Playwright sur le parcours nominal et les refus. Concurrence.
+Fait pour ce que le poste peut prouver sans inventer un budget. `php artisan test` couvre le circuit nominal EB → PAI et les pièces PDF. Vitest couvre le format monétaire, les états d’écran et le schéma de connexion. Playwright couvre les refus de connexion et le parcours connecté sur les écrans vides, y compris l’absence du total de l’annexe 2026. La concurrence parallèle sur `lockForUpdate` reste non concluante tant que PostgreSQL n’est pas installé (ADR-012, ADR-023).
 
 ### Phase 15 — Optimisation
 
-Index, N+1, en-têtes de sécurité, accessibilité clavier, files d’attente.
+Fait pour les lectures de la chaîne, les en-têtes, le clavier et la file des notifications. Les index portent les filtres de statut, de périmètre, d’exercice courant et d’événements budgétaires par acte. Les listes chargent en une fois les pièces, la dernière trace et les cumuls. Les réponses portent `X-Content-Type-Options`, `Referrer-Policy`, `X-Frame-Options`, `frame-ancestors` et `X-Request-Id`. Le CORS n’accepte que les origines du frontend. Un lien d’évitement ouvre le contenu. La notification d’une tâche ouverte part dans la file, trois tentatives, sans recalculer un crédit. Les PDF restent produits dans la transaction de l’acte.
 
 ### Phase 16 — Documentation finale
 

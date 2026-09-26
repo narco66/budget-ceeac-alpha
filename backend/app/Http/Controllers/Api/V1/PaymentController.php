@@ -2,17 +2,23 @@
 
 namespace App\Http\Controllers\Api\V1;
 
+use App\Domain\Expenditure\ChainListPreloader;
 use App\Domain\Expenditure\PaymentService;
 use App\Http\Controllers\Controller;
 use App\Models\Payment;
 use App\Models\PaymentOrder;
 use App\Support\ApiResponse;
+use App\Support\OfficialDocumentPayload;
+use App\Support\WorkflowCursor;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class PaymentController extends Controller
 {
-    public function __construct(private readonly PaymentService $payments) {}
+    public function __construct(
+        private readonly PaymentService $payments,
+        private readonly ChainListPreloader $lists,
+    ) {}
 
     public function index(): JsonResponse
     {
@@ -20,6 +26,7 @@ class PaymentController extends Controller
             ->with(['paymentOrder', 'workflow.currentStep'])
             ->orderByDesc('created_at')
             ->get();
+        $this->lists->payments($rows);
 
         return ApiResponse::success(
             $rows->map(fn (Payment $payment): array => $this->payload($payment))->values(),
@@ -106,7 +113,7 @@ class PaymentController extends Controller
     {
         $figures = $this->payments->figures($payment);
         $step = $payment->workflow?->currentStep;
-        $last = $payment->workflow?->events()->latest('created_at')->first();
+        $last = WorkflowCursor::last($payment->workflow);
 
         return [
             'id' => $payment->id,
@@ -120,7 +127,7 @@ class PaymentController extends Controller
             'beneficiary_label' => $payment->beneficiary_label,
             'paid_xaf' => $figures['paid_xaf'],
             'remainder_xaf' => $figures['remainder_xaf'],
-            'official_pdf' => null,
+            'official_documents' => OfficialDocumentPayload::for($payment),
             'payment_order' => $payment->relationLoaded('paymentOrder') && $payment->paymentOrder !== null ? [
                 'id' => $payment->paymentOrder->id,
                 'reference' => $payment->paymentOrder->reference,

@@ -2,17 +2,23 @@
 
 namespace App\Http\Controllers\Api\V1;
 
+use App\Domain\Expenditure\ChainListPreloader;
 use App\Domain\Expenditure\LiquidationService;
 use App\Http\Controllers\Controller;
 use App\Models\Commitment;
 use App\Models\Liquidation;
 use App\Support\ApiResponse;
+use App\Support\OfficialDocumentPayload;
+use App\Support\WorkflowCursor;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class LiquidationController extends Controller
 {
-    public function __construct(private readonly LiquidationService $liquidations) {}
+    public function __construct(
+        private readonly LiquidationService $liquidations,
+        private readonly ChainListPreloader $lists,
+    ) {}
 
     public function index(): JsonResponse
     {
@@ -20,6 +26,7 @@ class LiquidationController extends Controller
             ->with(['commitment', 'workflow.currentStep', 'paymentOrders'])
             ->orderByDesc('created_at')
             ->get();
+        $this->lists->liquidations($rows);
 
         return ApiResponse::success(
             $rows->map(fn (Liquidation $liquidation): array => $this->payload($liquidation))->values(),
@@ -110,7 +117,7 @@ class LiquidationController extends Controller
     {
         $figures = $this->liquidations->figures($liquidation);
         $step = $liquidation->workflow?->currentStep;
-        $last = $liquidation->workflow?->events()->latest('created_at')->first();
+        $last = WorkflowCursor::last($liquidation->workflow);
 
         return [
             'id' => $liquidation->id,
@@ -131,7 +138,7 @@ class LiquidationController extends Controller
             'certification_note' => $liquidation->certification_note,
             'liquidated_xaf' => $figures['liquidated_xaf'],
             'remainder_xaf' => $figures['remainder_xaf'],
-            'official_pdf' => null,
+            'official_documents' => OfficialDocumentPayload::for($liquidation),
             'commitment' => $liquidation->relationLoaded('commitment') && $liquidation->commitment !== null ? [
                 'id' => $liquidation->commitment->id,
                 'reference' => $liquidation->commitment->reference,
