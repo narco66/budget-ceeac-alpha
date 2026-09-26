@@ -57,7 +57,7 @@ php artisan queue:work
 
 Ne pas lancer `migrate:fresh` lorsque cette base contient déjà des données utiles.
 
-Avec PostgreSQL installé, créer la base `gesbudep`, aligner `DB_*` sur `.env.example`, puis exécuter les mêmes commandes `migrate`, `db:seed`, `serve` et `queue:work`.
+Avec PostgreSQL installé, créer la base `budget_ceeac_alpha_db`, aligner `DB_*` sur `.env.example`, puis exécuter les mêmes commandes `migrate`, `db:seed`, `serve` et `queue:work`. Sur cette machine, PostgreSQL 18 écoute sur le port 5433.
 
 `queue:work` délivre les notifications nées des tâches ouvertes. Les échecs restent dans `failed_jobs`. Les actes financiers et leurs PDF ne passent pas par cette file.
 

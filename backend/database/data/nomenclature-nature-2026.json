@@ -1,0 +1,2030 @@
+[
+ {
+  "level": "titre",
+  "code": "REC-T1",
+  "label": "RECETTES ORDINAIRES GLOBALISEES",
+  "parent": null
+ },
+ {
+  "level": "article",
+  "code": "70",
+  "label": "VENTES DE PRODUITS ET SERVICES",
+  "parent": "REC-T1"
+ },
+ {
+  "level": "paragraphe",
+  "code": "701",
+  "label": "VENTES DE PRODUITS",
+  "parent": "70"
+ },
+ {
+  "level": "rubrique",
+  "code": "701000",
+  "label": "Ventes de produits",
+  "parent": "701"
+ },
+ {
+  "level": "paragraphe",
+  "code": "702",
+  "label": "VENTES DE PRESTATIONS DE SERVICES",
+  "parent": "70"
+ },
+ {
+  "level": "rubrique",
+  "code": "702000",
+  "label": "Ventes de prestations de services",
+  "parent": "702"
+ },
+ {
+  "level": "paragraphe",
+  "code": "703",
+  "label": "VARIATION DE STOCKS DE PRODUITS ET SERVICES",
+  "parent": "70"
+ },
+ {
+  "level": "rubrique",
+  "code": "703000",
+  "label": "Variation de stocks de produits et services",
+  "parent": "703"
+ },
+ {
+  "level": "article",
+  "code": "72",
+  "label": "CONTRIBUTIONS STATUTAIRES & APPUIS BUDGETAIRES",
+  "parent": "REC-T1"
+ },
+ {
+  "level": "paragraphe",
+  "code": "721",
+  "label": "CONTRIBUTIONS ETATS MEMBRES CCI",
+  "parent": "72"
+ },
+ {
+  "level": "rubrique",
+  "code": "721010",
+  "label": "République d'Angola",
+  "parent": "721"
+ },
+ {
+  "level": "rubrique",
+  "code": "721020",
+  "label": "République du Burundi",
+  "parent": "721"
+ },
+ {
+  "level": "rubrique",
+  "code": "721030",
+  "label": "République du Cameroun",
+  "parent": "721"
+ },
+ {
+  "level": "rubrique",
+  "code": "721040",
+  "label": "République Centrafricaine",
+  "parent": "721"
+ },
+ {
+  "level": "rubrique",
+  "code": "721050",
+  "label": "République Populaire du Congo",
+  "parent": "721"
+ },
+ {
+  "level": "rubrique",
+  "code": "721060",
+  "label": "République Démocratique du Congo",
+  "parent": "721"
+ },
+ {
+  "level": "rubrique",
+  "code": "721070",
+  "label": "République Gabonaise",
+  "parent": "721"
+ },
+ {
+  "level": "rubrique",
+  "code": "721080",
+  "label": "République de Guinée Equatoriale",
+  "parent": "721"
+ },
+ {
+  "level": "rubrique",
+  "code": "721090",
+  "label": "République Rwandaise",
+  "parent": "721"
+ },
+ {
+  "level": "rubrique",
+  "code": "721100",
+  "label": "République Démocratique de Sao Tomé et Principe",
+  "parent": "721"
+ },
+ {
+  "level": "rubrique",
+  "code": "721110",
+  "label": "République du Tchad",
+  "parent": "721"
+ },
+ {
+  "level": "paragraphe",
+  "code": "722",
+  "label": "DROITS ET FRAIS ADMINISTRATIFS",
+  "parent": "72"
+ },
+ {
+  "level": "rubrique",
+  "code": "722000",
+  "label": "Droits et frais administratifs",
+  "parent": "722"
+ },
+ {
+  "level": "paragraphe",
+  "code": "723",
+  "label": "AMENDES, PÉNALITÉS ET CONDAMNATIONS PÉCUNIAIRES",
+  "parent": "72"
+ },
+ {
+  "level": "rubrique",
+  "code": "723000",
+  "label": "Amendes, pénalités et condamnations pécuniaires",
+  "parent": "723"
+ },
+ {
+  "level": "paragraphe",
+  "code": "725",
+  "label": "COTISATIONS DE SÉCURITÉ SOCIALE",
+  "parent": "72"
+ },
+ {
+  "level": "rubrique",
+  "code": "725000",
+  "label": "Cotisations de sécurité sociale",
+  "parent": "725"
+ },
+ {
+  "level": "paragraphe",
+  "code": "729",
+  "label": "APPUIS BUDGÉTAIRES ET AUTRES RECETTES",
+  "parent": "72"
+ },
+ {
+  "level": "rubrique",
+  "code": "729100",
+  "label": "Appui budgétaire Multilatéral",
+  "parent": "729"
+ },
+ {
+  "level": "rubrique",
+  "code": "729200",
+  "label": "Appui budgétaire Bilatéral et Gouvernements Etrangers (GE)",
+  "parent": "729"
+ },
+ {
+  "level": "rubrique",
+  "code": "729400",
+  "label": "Appui budgétaire Communautés Economiques régionales (CER)",
+  "parent": "729"
+ },
+ {
+  "level": "rubrique",
+  "code": "729500",
+  "label": "Autres recettes et contributions diverses",
+  "parent": "729"
+ },
+ {
+  "level": "article",
+  "code": "77",
+  "label": "PRODUITS FINANCIERS",
+  "parent": "REC-T1"
+ },
+ {
+  "level": "paragraphe",
+  "code": "771",
+  "label": "INTÉRÊTS DES PRÊTS",
+  "parent": "77"
+ },
+ {
+  "level": "rubrique",
+  "code": "771000",
+  "label": "Intérêts des prêts",
+  "parent": "771"
+ },
+ {
+  "level": "paragraphe",
+  "code": "772",
+  "label": "INTÉRÊTS SUR LES DÉPÔTS À TERME",
+  "parent": "77"
+ },
+ {
+  "level": "rubrique",
+  "code": "772000",
+  "label": "Intérêts sur les dépôts à terme",
+  "parent": "772"
+ },
+ {
+  "level": "paragraphe",
+  "code": "774",
+  "label": "INTÉRÊTS SUR TITRES DE PLACEMENT",
+  "parent": "77"
+ },
+ {
+  "level": "rubrique",
+  "code": "774000",
+  "label": "Intérêts sur titres de placement",
+  "parent": "774"
+ },
+ {
+  "level": "paragraphe",
+  "code": "776",
+  "label": "GAINS DE CHANGE",
+  "parent": "77"
+ },
+ {
+  "level": "rubrique",
+  "code": "776000",
+  "label": "Gains de change",
+  "parent": "776"
+ },
+ {
+  "level": "titre",
+  "code": "REC-T2",
+  "label": "RECETTES EXTRAORDINAIRES GLOBALISEES",
+  "parent": null
+ },
+ {
+  "level": "article",
+  "code": "73",
+  "label": "TRANSFERTS RECUS D’AUTRES BUDGETS DE LA COMMUNAUTE",
+  "parent": "REC-T2"
+ },
+ {
+  "level": "paragraphe",
+  "code": "731",
+  "label": "TRANSFERTS REÇUS DU BUDGET GÉNÉRAL",
+  "parent": "73"
+ },
+ {
+  "level": "paragraphe",
+  "code": "732",
+  "label": "TRANSFERTS REÇUS DES BUDGETS ANNEXES ET DES COMPTES",
+  "parent": "73"
+ },
+ {
+  "level": "rubrique",
+  "code": "732100",
+  "label": "Transferts reçus des budgets annexes",
+  "parent": "732"
+ },
+ {
+  "level": "rubrique",
+  "code": "732200",
+  "label": "Transferts reçus des comptes spéciaux",
+  "parent": "732"
+ },
+ {
+  "level": "article",
+  "code": "74",
+  "label": "DE CONCOURS",
+  "parent": "REC-T2"
+ },
+ {
+  "level": "paragraphe",
+  "code": "741",
+  "label": "DONS PROJETS/PROGRAMMES",
+  "parent": "74"
+ },
+ {
+  "level": "rubrique",
+  "code": "741100",
+  "label": "Don projets/programmes Etats membres",
+  "parent": "741"
+ },
+ {
+  "level": "rubrique",
+  "code": "741200",
+  "label": "Don projets/programmes Multilatéral",
+  "parent": "741"
+ },
+ {
+  "level": "rubrique",
+  "code": "741300",
+  "label": "Don projets/programmes Bilatéral",
+  "parent": "741"
+ },
+ {
+  "level": "rubrique",
+  "code": "741400",
+  "label": "Don projets/programmes des organismes Africains",
+  "parent": "741"
+ },
+ {
+  "level": "rubrique",
+  "code": "741500",
+  "label": "Dons des organismes privés",
+  "parent": "741"
+ },
+ {
+  "level": "paragraphe",
+  "code": "742",
+  "label": "SUBVENTIONS D'EXPLOITATION",
+  "parent": "74"
+ },
+ {
+  "level": "rubrique",
+  "code": "742100",
+  "label": "Subventions Etats membres",
+  "parent": "742"
+ },
+ {
+  "level": "rubrique",
+  "code": "742200",
+  "label": "Subventions PTF Multilatéral",
+  "parent": "742"
+ },
+ {
+  "level": "rubrique",
+  "code": "742300",
+  "label": "Subventions PTF Bilatéral",
+  "parent": "742"
+ },
+ {
+  "level": "rubrique",
+  "code": "742400",
+  "label": "Subventions des organismes Africains",
+  "parent": "742"
+ },
+ {
+  "level": "rubrique",
+  "code": "742500",
+  "label": "Subventions autres organismes",
+  "parent": "742"
+ },
+ {
+  "level": "paragraphe",
+  "code": "743",
+  "label": "FONDS DE CONCOURS",
+  "parent": "74"
+ },
+ {
+  "level": "rubrique",
+  "code": "743100",
+  "label": "Fonds de concours Etats membres",
+  "parent": "743"
+ },
+ {
+  "level": "rubrique",
+  "code": "743200",
+  "label": "Fonds de concours PTF Multilatéral",
+  "parent": "743"
+ },
+ {
+  "level": "rubrique",
+  "code": "743300",
+  "label": "Fonds de concours PTF Bilatéral",
+  "parent": "743"
+ },
+ {
+  "level": "rubrique",
+  "code": "743400",
+  "label": "Fonds de concours des organismes Africains",
+  "parent": "743"
+ },
+ {
+  "level": "rubrique",
+  "code": "743500",
+  "label": "Fonds de concours autres organismes",
+  "parent": "743"
+ },
+ {
+  "level": "paragraphe",
+  "code": "749",
+  "label": "AUTRES DONS ET LEGS",
+  "parent": "74"
+ },
+ {
+  "level": "rubrique",
+  "code": "749000",
+  "label": "Autres dons et legs",
+  "parent": "749"
+ },
+ {
+  "level": "article",
+  "code": "75",
+  "label": "PRODUITS EXCEPTIONNELS",
+  "parent": "REC-T2"
+ },
+ {
+  "level": "paragraphe",
+  "code": "751",
+  "label": "REMISES ET ANNULATIONS DE DETTES",
+  "parent": "75"
+ },
+ {
+  "level": "rubrique",
+  "code": "751000",
+  "label": "Remises et annulations de dettes",
+  "parent": "751"
+ },
+ {
+  "level": "paragraphe",
+  "code": "752",
+  "label": "RESTITUTIONS À L'AGENCE COMPTABLE DE SOMMES INDÛMENT",
+  "parent": "75"
+ },
+ {
+  "level": "rubrique",
+  "code": "752000",
+  "label": "Restitutions à l'agence comptable des sommes indûment payées",
+  "parent": "752"
+ },
+ {
+  "level": "paragraphe",
+  "code": "753",
+  "label": "CONTRIBUTIONS SPÉCIALES DES ETATS MEMBRES ET",
+  "parent": "75"
+ },
+ {
+  "level": "rubrique",
+  "code": "753000",
+  "label": "Contributions spéciales des Etats membres et subventions diverses",
+  "parent": "753"
+ },
+ {
+  "level": "paragraphe",
+  "code": "754",
+  "label": "PRODUITS DE CESSIONS D’IMMOBILISATIONS",
+  "parent": "75"
+ },
+ {
+  "level": "rubrique",
+  "code": "754000",
+  "label": "Produits de cession d'immobilisations",
+  "parent": "754"
+ },
+ {
+  "level": "paragraphe",
+  "code": "759",
+  "label": "AUTRES RECETTES EXCEPTIONNELLES",
+  "parent": "75"
+ },
+ {
+  "level": "rubrique",
+  "code": "759000",
+  "label": "Autres recettes exceptionnelles",
+  "parent": "759"
+ },
+ {
+  "level": "article",
+  "code": "14",
+  "label": "SUBVENTIONS D'INVESTISSEMENT RECUES",
+  "parent": "REC-T2"
+ },
+ {
+  "level": "paragraphe",
+  "code": "141",
+  "label": "SUBVENTIONS D'INVESTISSEMENT",
+  "parent": "14"
+ },
+ {
+  "level": "rubrique",
+  "code": "141100",
+  "label": "Subventions des Etats membres",
+  "parent": "141"
+ },
+ {
+  "level": "rubrique",
+  "code": "141200",
+  "label": "Subventions des Partenaires Techniques et Financiers",
+  "parent": "141"
+ },
+ {
+  "level": "rubrique",
+  "code": "141300",
+  "label": "Subventions autres organismes et institutions",
+  "parent": "141"
+ },
+ {
+  "level": "rubrique",
+  "code": "141800",
+  "label": "Autres Subventions d'investissement",
+  "parent": "141"
+ },
+ {
+  "level": "titre",
+  "code": "REC-T3",
+  "label": "RECETTES EXTRAORDINAIRES FLECHEES",
+  "parent": null
+ },
+ {
+  "level": "article",
+  "code": "10",
+  "label": "RESSOURCES PERMANENTES, FINANCEMENT DE L'ACTIF",
+  "parent": "REC-T3"
+ },
+ {
+  "level": "paragraphe",
+  "code": "101",
+  "label": "BIENS REMIS A DISPOSITION DE LA COMMUNAUTE",
+  "parent": "10"
+ },
+ {
+  "level": "rubrique",
+  "code": "101100",
+  "label": "Dotation initiale des Etats membres",
+  "parent": "101"
+ },
+ {
+  "level": "rubrique",
+  "code": "101200",
+  "label": "Dotation initiale des Partenaires Techniques et Financiers",
+  "parent": "101"
+ },
+ {
+  "level": "rubrique",
+  "code": "101300",
+  "label": "Dotation initiale autres organismes et institutions",
+  "parent": "101"
+ },
+ {
+  "level": "rubrique",
+  "code": "101400",
+  "label": "Dotation complémentaire des Etats membres",
+  "parent": "101"
+ },
+ {
+  "level": "rubrique",
+  "code": "101500",
+  "label": "Dotation complémentaire des Partenaires Techniques et Financiers",
+  "parent": "101"
+ },
+ {
+  "level": "rubrique",
+  "code": "101600",
+  "label": "Dotation complémentaire autres organismes et institutions",
+  "parent": "101"
+ },
+ {
+  "level": "rubrique",
+  "code": "101800",
+  "label": "Autres dotations",
+  "parent": "101"
+ },
+ {
+  "level": "paragraphe",
+  "code": "105",
+  "label": "ECARTS DE RÉÉVALUATION",
+  "parent": "10"
+ },
+ {
+  "level": "rubrique",
+  "code": "105100",
+  "label": "Ecarts de réévaluation sur les immobilisations incorporelles",
+  "parent": "105"
+ },
+ {
+  "level": "rubrique",
+  "code": "105200",
+  "label": "Ecarts de réévaluation sur les immobilisations corporelles",
+  "parent": "105"
+ },
+ {
+  "level": "titre",
+  "code": "DEP-T1",
+  "label": "DEPENSES DE PERSONNEL",
+  "parent": null
+ },
+ {
+  "level": "article",
+  "code": "66",
+  "label": "CHARGES DE PERSONNEL",
+  "parent": "DEP-T1"
+ },
+ {
+  "level": "paragraphe",
+  "code": "661",
+  "label": "TRAITEMENTS ET SALAIRES",
+  "parent": "66"
+ },
+ {
+  "level": "rubrique",
+  "code": "661000",
+  "label": "Traitements et salaires",
+  "parent": "661"
+ },
+ {
+  "level": "paragraphe",
+  "code": "663",
+  "label": "PRIMES ET INDEMNITÉS",
+  "parent": "66"
+ },
+ {
+  "level": "rubrique",
+  "code": "663000",
+  "label": "Primes et indemnités",
+  "parent": "663"
+ },
+ {
+  "level": "paragraphe",
+  "code": "664",
+  "label": "COTISATIONS SOCIALES",
+  "parent": "66"
+ },
+ {
+  "level": "rubrique",
+  "code": "664000",
+  "label": "Cotisations sociales",
+  "parent": "664"
+ },
+ {
+  "level": "paragraphe",
+  "code": "665",
+  "label": "AVANTAGES EN NATURE AU PERSONNEL",
+  "parent": "66"
+ },
+ {
+  "level": "rubrique",
+  "code": "665000",
+  "label": "Avantages en nature au personnel",
+  "parent": "665"
+ },
+ {
+  "level": "paragraphe",
+  "code": "666",
+  "label": "PRESTATIONS SOCIALES",
+  "parent": "66"
+ },
+ {
+  "level": "rubrique",
+  "code": "666000",
+  "label": "Prestations sociales",
+  "parent": "666"
+ },
+ {
+  "level": "paragraphe",
+  "code": "669",
+  "label": "AUTRES DÉPENSES DE PERSONNEL",
+  "parent": "66"
+ },
+ {
+  "level": "rubrique",
+  "code": "669000",
+  "label": "Autres dépenses de personnel",
+  "parent": "669"
+ },
+ {
+  "level": "titre",
+  "code": "DEP-T2",
+  "label": "DEPENSES DE FONCTIONNEMENT",
+  "parent": null
+ },
+ {
+  "level": "article",
+  "code": "67",
+  "label": "INTERETS ET FRAIS FINANCIERS",
+  "parent": "DEP-T2"
+ },
+ {
+  "level": "paragraphe",
+  "code": "671",
+  "label": "INTÉRÊTS ET FRAIS FINANCIERS SUR LA DETTE",
+  "parent": "67"
+ },
+ {
+  "level": "rubrique",
+  "code": "671000",
+  "label": "Intérêts et frais financiers sur la dette",
+  "parent": "671"
+ },
+ {
+  "level": "paragraphe",
+  "code": "672",
+  "label": "PERTES SUR CESSIONS DE TITRES DE PLACEMENT",
+  "parent": "67"
+ },
+ {
+  "level": "rubrique",
+  "code": "672000",
+  "label": "Pertes sur cessions de titres de placement",
+  "parent": "672"
+ },
+ {
+  "level": "paragraphe",
+  "code": "676",
+  "label": "PERTES DE CHANGE",
+  "parent": "67"
+ },
+ {
+  "level": "rubrique",
+  "code": "676000",
+  "label": "Pertes de change",
+  "parent": "676"
+ },
+ {
+  "level": "paragraphe",
+  "code": "679",
+  "label": "AUTRES INTÉRÊTS ET FRAIS FINANCIERS",
+  "parent": "67"
+ },
+ {
+  "level": "rubrique",
+  "code": "679000",
+  "label": "Autres intérêts et frais financiers",
+  "parent": "679"
+ },
+ {
+  "level": "article",
+  "code": "60",
+  "label": "ACHATS DE BIENS",
+  "parent": "DEP-T2"
+ },
+ {
+  "level": "paragraphe",
+  "code": "601",
+  "label": "MATIÈRES, MATÉRIEL ET FOURNITURES",
+  "parent": "60"
+ },
+ {
+  "level": "rubrique",
+  "code": "601100",
+  "label": "Fournitures de bureau",
+  "parent": "601"
+ },
+ {
+  "level": "rubrique",
+  "code": "601200",
+  "label": "Fournitures et consommables informatiques",
+  "parent": "601"
+ },
+ {
+  "level": "rubrique",
+  "code": "601300",
+  "label": "Carburant et lubrifiant",
+  "parent": "601"
+ },
+ {
+  "level": "rubrique",
+  "code": "601400",
+  "label": "Produits, outillages et petits matériels d'entretien",
+  "parent": "601"
+ },
+ {
+  "level": "paragraphe",
+  "code": "603",
+  "label": "VARIATIONS DES STOCKS DE BIENS FONGIBLES ACHETÉS",
+  "parent": "60"
+ },
+ {
+  "level": "rubrique",
+  "code": "603000",
+  "label": "Variations des stocks de biens fongibles achetés",
+  "parent": "603"
+ },
+ {
+  "level": "paragraphe",
+  "code": "605",
+  "label": "EAU, ÉLECTRICITÉ, GAZ ET AUTRES SOURCES D’ÉNERGIE",
+  "parent": "60"
+ },
+ {
+  "level": "rubrique",
+  "code": "605000",
+  "label": "Eau, électricité, gaz et autres sources d'énergie",
+  "parent": "605"
+ },
+ {
+  "level": "paragraphe",
+  "code": "606",
+  "label": "MATÉRIEL ET FOURNITURES SPÉCIFIQUES",
+  "parent": "60"
+ },
+ {
+  "level": "rubrique",
+  "code": "606000",
+  "label": "Matériel et fournitures spécifiques",
+  "parent": "606"
+ },
+ {
+  "level": "paragraphe",
+  "code": "609",
+  "label": "AUTRES ACHATS DE BIENS",
+  "parent": "60"
+ },
+ {
+  "level": "rubrique",
+  "code": "609000",
+  "label": "Autres achats de biens",
+  "parent": "609"
+ },
+ {
+  "level": "article",
+  "code": "61",
+  "label": "ACHATS DE SERVICES",
+  "parent": "DEP-T2"
+ },
+ {
+  "level": "paragraphe",
+  "code": "611",
+  "label": "FRAIS DE TRANSPORT ET DE MISSION",
+  "parent": "61"
+ },
+ {
+  "level": "rubrique",
+  "code": "611100",
+  "label": "Transport du personnel et des plis",
+  "parent": "611"
+ },
+ {
+  "level": "rubrique",
+  "code": "611200",
+  "label": "Voyages et déplacements",
+  "parent": "611"
+ },
+ {
+  "level": "rubrique",
+  "code": "611300",
+  "label": "Frais de missions",
+  "parent": "611"
+ },
+ {
+  "level": "paragraphe",
+  "code": "612",
+  "label": "LOYERS ET CHARGES LOCATIVES",
+  "parent": "61"
+ },
+ {
+  "level": "rubrique",
+  "code": "612100",
+  "label": "Location des terrains",
+  "parent": "612"
+ },
+ {
+  "level": "rubrique",
+  "code": "612200",
+  "label": "Location des bâtiments",
+  "parent": "612"
+ },
+ {
+  "level": "rubrique",
+  "code": "612300",
+  "label": "Locations de matériels et outillages",
+  "parent": "612"
+ },
+ {
+  "level": "paragraphe",
+  "code": "614",
+  "label": "ENTRETIEN ET MAINTENANCE",
+  "parent": "61"
+ },
+ {
+  "level": "rubrique",
+  "code": "614100",
+  "label": "Entretien et réparations des biens immobiliers",
+  "parent": "614"
+ },
+ {
+  "level": "rubrique",
+  "code": "614200",
+  "label": "Entretien et réparations de matériels et mobiliers",
+  "parent": "614"
+ },
+ {
+  "level": "rubrique",
+  "code": "614300",
+  "label": "Maintenance",
+  "parent": "614"
+ },
+ {
+  "level": "rubrique",
+  "code": "614400",
+  "label": "Service extérieur de gardiennage et de nettoyage",
+  "parent": "614"
+ },
+ {
+  "level": "paragraphe",
+  "code": "615",
+  "label": "ASSURANCES",
+  "parent": "61"
+ },
+ {
+  "level": "rubrique",
+  "code": "615000",
+  "label": "Assurances",
+  "parent": "615"
+ },
+ {
+  "level": "paragraphe",
+  "code": "617",
+  "label": "FRAIS DE RELATIONS PUBLIQUES",
+  "parent": "61"
+ },
+ {
+  "level": "rubrique",
+  "code": "617100",
+  "label": "Frais de réception et de représentation",
+  "parent": "617"
+ },
+ {
+  "level": "rubrique",
+  "code": "617200",
+  "label": "Annonces, insertions et publications",
+  "parent": "617"
+ },
+ {
+  "level": "rubrique",
+  "code": "617300",
+  "label": "Catalogues, imprimés publicitaires et traductions",
+  "parent": "617"
+ },
+ {
+  "level": "rubrique",
+  "code": "617400",
+  "label": "Frais de séminaires et ateliers",
+  "parent": "617"
+ },
+ {
+  "level": "rubrique",
+  "code": "617500",
+  "label": "Fêtes et cérémonies",
+  "parent": "617"
+ },
+ {
+  "level": "rubrique",
+  "code": "617600",
+  "label": "Documentations générales et techniques",
+  "parent": "617"
+ },
+ {
+  "level": "paragraphe",
+  "code": "618",
+  "label": "DEPENSES DE COMMUNICATIONS",
+  "parent": "61"
+ },
+ {
+  "level": "rubrique",
+  "code": "618100",
+  "label": "Frais de téléphone et télécopie",
+  "parent": "618"
+ },
+ {
+  "level": "rubrique",
+  "code": "618200",
+  "label": "Internet et site web",
+  "parent": "618"
+ },
+ {
+  "level": "rubrique",
+  "code": "618300",
+  "label": "Frais de poste et télécommunication",
+  "parent": "618"
+ },
+ {
+  "level": "article",
+  "code": "62",
+  "label": "AUTRES SERVICES",
+  "parent": "DEP-T2"
+ },
+ {
+  "level": "paragraphe",
+  "code": "621",
+  "label": "FRAIS BANCAIRES",
+  "parent": "62"
+ },
+ {
+  "level": "rubrique",
+  "code": "621000",
+  "label": "Frais bancaires banque centrale",
+  "parent": "621"
+ },
+ {
+  "level": "rubrique",
+  "code": "621100",
+  "label": "Frais bancaires comptes postaux",
+  "parent": "621"
+ },
+ {
+  "level": "rubrique",
+  "code": "621200",
+  "label": "Frais bancaires banques commerciales",
+  "parent": "621"
+ },
+ {
+  "level": "paragraphe",
+  "code": "622",
+  "label": "REMUNERATIONS D'INTERMEDIAIRES ET DE CONSEILS",
+  "parent": "62"
+ },
+ {
+  "level": "rubrique",
+  "code": "622100",
+  "label": "Honoraires et Etudes et prestations de services",
+  "parent": "622"
+ },
+ {
+  "level": "rubrique",
+  "code": "622200",
+  "label": "Frais d'actes et de contentieux",
+  "parent": "622"
+ },
+ {
+  "level": "paragraphe",
+  "code": "623",
+  "label": "FRAIS DE RECRUTEMENT ET FORMATION DU PERSONNEL",
+  "parent": "62"
+ },
+ {
+  "level": "rubrique",
+  "code": "623100",
+  "label": "Frais de recrutement du personnel",
+  "parent": "623"
+ },
+ {
+  "level": "rubrique",
+  "code": "623200",
+  "label": "Frais de formation du personnel",
+  "parent": "623"
+ },
+ {
+  "level": "rubrique",
+  "code": "623300",
+  "label": "Frais de déménagement",
+  "parent": "623"
+ },
+ {
+  "level": "paragraphe",
+  "code": "624",
+  "label": "REDEVANCES POUR BREVETS, LICENCES ET LOGICIELS",
+  "parent": "62"
+ },
+ {
+  "level": "rubrique",
+  "code": "624000",
+  "label": "Redevances pour brevets, licences et logiciels",
+  "parent": "624"
+ },
+ {
+  "level": "paragraphe",
+  "code": "629",
+  "label": "AUTRES ACQUISITIONS DE SERVICES",
+  "parent": "62"
+ },
+ {
+  "level": "rubrique",
+  "code": "629000",
+  "label": "Autres acquisitions de services",
+  "parent": "629"
+ },
+ {
+  "level": "article",
+  "code": "65",
+  "label": "CHARGES EXCEPTIONNELLES",
+  "parent": "DEP-T2"
+ },
+ {
+  "level": "paragraphe",
+  "code": "651",
+  "label": "ANNULATIONS DE PRODUITS CONSTATÉS AU COURS DES ANNÉES",
+  "parent": "65"
+ },
+ {
+  "level": "rubrique",
+  "code": "651000",
+  "label": "Annulations de produits constatés au cours des années antérieures",
+  "parent": "651"
+ },
+ {
+  "level": "paragraphe",
+  "code": "652",
+  "label": "CONDAMNATIONS ET TRANSACTIONS",
+  "parent": "65"
+ },
+ {
+  "level": "rubrique",
+  "code": "652000",
+  "label": "Condamnations et transactions",
+  "parent": "652"
+ },
+ {
+  "level": "paragraphe",
+  "code": "653",
+  "label": "JETONS DE PRÉSENCE",
+  "parent": "65"
+ },
+ {
+  "level": "rubrique",
+  "code": "653000",
+  "label": "Jetons de présence aux différentes assises",
+  "parent": "653"
+ },
+ {
+  "level": "paragraphe",
+  "code": "654",
+  "label": "VALEURS COMPTABLES DES IMMOBILISATIONS CÉDÉES, MISES AU",
+  "parent": "65"
+ },
+ {
+  "level": "rubrique",
+  "code": "654000",
+  "label": "valeur",
+  "parent": "654"
+ },
+ {
+  "level": "paragraphe",
+  "code": "659",
+  "label": "AUTRES CHARGES EXCEPTIONNELLES",
+  "parent": "65"
+ },
+ {
+  "level": "rubrique",
+  "code": "659000",
+  "label": "Autres charges exceptionnelles",
+  "parent": "659"
+ },
+ {
+  "level": "titre",
+  "code": "DEP-T3",
+  "label": "DEPENSES D'INTERVENTION",
+  "parent": null
+ },
+ {
+  "level": "article",
+  "code": "63",
+  "label": "SUBVENTIONS VERSEES",
+  "parent": "DEP-T3"
+ },
+ {
+  "level": "paragraphe",
+  "code": "632",
+  "label": "SUBVENTIONS AUX ENTITÉS PUBLIQUES",
+  "parent": "63"
+ },
+ {
+  "level": "rubrique",
+  "code": "632000",
+  "label": "Subventions aux administrations publiques",
+  "parent": "632"
+ },
+ {
+  "level": "rubrique",
+  "code": "632100",
+  "label": "Subventions aux collectivités locales",
+  "parent": "632"
+ },
+ {
+  "level": "paragraphe",
+  "code": "633",
+  "label": "SUBVENTIONS AUX ENTREPRISES PRIVÉES ET ORGANISATIONS DE",
+  "parent": "63"
+ },
+ {
+  "level": "rubrique",
+  "code": "633100",
+  "label": "Subventions aux entreprises privées",
+  "parent": "633"
+ },
+ {
+  "level": "rubrique",
+  "code": "633200",
+  "label": "Subventions aux Organisations de la Société Civile (OSC)",
+  "parent": "633"
+ },
+ {
+  "level": "paragraphe",
+  "code": "634",
+  "label": "SUBVENTIONS AUX INSTITUTIONS FINANCIÈRES",
+  "parent": "63"
+ },
+ {
+  "level": "rubrique",
+  "code": "634000",
+  "label": "Subventions aux institutions financières",
+  "parent": "634"
+ },
+ {
+  "level": "paragraphe",
+  "code": "639",
+  "label": "SUBVENTIONS À D’AUTRES CATÉGORIES DE BÉNÉFICIAIRES",
+  "parent": "63"
+ },
+ {
+  "level": "rubrique",
+  "code": "639000",
+  "label": "Subventions à d'autres catégories de bénéficiaires",
+  "parent": "639"
+ },
+ {
+  "level": "article",
+  "code": "64",
+  "label": "TRANSFERTS VERSES",
+  "parent": "DEP-T3"
+ },
+ {
+  "level": "paragraphe",
+  "code": "641",
+  "label": "TRANSFERTS AUX INSTITUTIONS DE LA COMMUNAUTÉ",
+  "parent": "64"
+ },
+ {
+  "level": "rubrique",
+  "code": "641100",
+  "label": "Transferts au Parlement de la Communauté",
+  "parent": "641"
+ },
+ {
+  "level": "rubrique",
+  "code": "641200",
+  "label": "Transferts à la Cour de Justice de la Communauté ;",
+  "parent": "641"
+ },
+ {
+  "level": "rubrique",
+  "code": "641300",
+  "label": "Transferts à la Cour des Comptes de la Communauté",
+  "parent": "641"
+ },
+ {
+  "level": "rubrique",
+  "code": "641400",
+  "label": "Transferts aux Institutions spécialisées",
+  "parent": "641"
+ },
+ {
+  "level": "rubrique",
+  "code": "641500",
+  "label": "Transferts aux Institutions financières",
+  "parent": "641"
+ },
+ {
+  "level": "paragraphe",
+  "code": "644",
+  "label": "TRANSFERTS AUX BUREAUX DE LIAISON DE LA CEEAC",
+  "parent": "64"
+ },
+ {
+  "level": "rubrique",
+  "code": "644000",
+  "label": "Transferts aux bureaux de liaison de la CEEAC",
+  "parent": "644"
+ },
+ {
+  "level": "paragraphe",
+  "code": "645",
+  "label": "TRANSFERTS AUX CER DU CONTINENT ET CONTRIBUTIONS AUX",
+  "parent": "64"
+ },
+ {
+  "level": "rubrique",
+  "code": "645000",
+  "label": "Transferts aux CER du Continent Africain",
+  "parent": "645"
+ },
+ {
+  "level": "rubrique",
+  "code": "645100",
+  "label": "Contributions aux organisations internationales",
+  "parent": "645"
+ },
+ {
+  "level": "paragraphe",
+  "code": "647",
+  "label": "TRANSFERTS AUX COMPTES SPÉCIAUX",
+  "parent": "64"
+ },
+ {
+  "level": "rubrique",
+  "code": "647000",
+  "label": "Transferts aux comptes spéciaux",
+  "parent": "647"
+ },
+ {
+  "level": "paragraphe",
+  "code": "648",
+  "label": "PENSIONS DE RETRAITES DES FONCTIONNAIRES ET AUTRES",
+  "parent": "64"
+ },
+ {
+  "level": "rubrique",
+  "code": "648000",
+  "label": "Communauté",
+  "parent": "648"
+ },
+ {
+  "level": "paragraphe",
+  "code": "649",
+  "label": "AUTRES TRANSFERTS",
+  "parent": "64"
+ },
+ {
+  "level": "rubrique",
+  "code": "649000",
+  "label": "Autres transferts",
+  "parent": "649"
+ },
+ {
+  "level": "titre",
+  "code": "DEP-T4",
+  "label": "DEPENSES D'INVESTISSEMENTS ET D'EQUIPEMENTS",
+  "parent": null
+ },
+ {
+  "level": "article",
+  "code": "21",
+  "label": "IMMOBILISATIONS INCORPORELLES",
+  "parent": "DEP-T4"
+ },
+ {
+  "level": "paragraphe",
+  "code": "211",
+  "label": "FRAIS DE RECHERCHE ET DE DÉVELOPPEMENT",
+  "parent": "21"
+ },
+ {
+  "level": "rubrique",
+  "code": "211000",
+  "label": "Frais de recherche et développement",
+  "parent": "211"
+ },
+ {
+  "level": "paragraphe",
+  "code": "212",
+  "label": "BREVETS, MARQUES DE FABRIQUE, DROITS D’AUTEUR",
+  "parent": "21"
+ },
+ {
+  "level": "rubrique",
+  "code": "212000",
+  "label": "Brevets, marques de fabrique, droits d'auteur",
+  "parent": "212"
+ },
+ {
+  "level": "paragraphe",
+  "code": "213",
+  "label": "CONCEPTIONS DE SYSTÈMES D’ORGANISATION- PROGICIELS",
+  "parent": "21"
+ },
+ {
+  "level": "rubrique",
+  "code": "213000",
+  "label": "Conceptions de systèmes d'organisation - progiciels",
+  "parent": "213"
+ },
+ {
+  "level": "paragraphe",
+  "code": "214",
+  "label": "DROITS D’EXPLOITATION FONDS DE COMMERCE",
+  "parent": "21"
+ },
+ {
+  "level": "rubrique",
+  "code": "214000",
+  "label": "Droits d'exploitation de fonds de commerce",
+  "parent": "214"
+ },
+ {
+  "level": "paragraphe",
+  "code": "219",
+  "label": "AUTRES DROITS ET VALEURS INCORPORELS",
+  "parent": "21"
+ },
+ {
+  "level": "rubrique",
+  "code": "219000",
+  "label": "Autres droits et valeurs incorporels",
+  "parent": "219"
+ },
+ {
+  "level": "article",
+  "code": "22",
+  "label": "ACQUISITIONS ET AMENAGEMENTS DES SOLS ET SOUS - SOLS",
+  "parent": "DEP-T4"
+ },
+ {
+  "level": "paragraphe",
+  "code": "221",
+  "label": "TERRAINS",
+  "parent": "22"
+ },
+ {
+  "level": "rubrique",
+  "code": "221000",
+  "label": "Terrains",
+  "parent": "221"
+ },
+ {
+  "level": "paragraphe",
+  "code": "222",
+  "label": "SOUS-SOLS, GISEMENTS ET CARRIÈRES",
+  "parent": "22"
+ },
+ {
+  "level": "rubrique",
+  "code": "222000",
+  "label": "Sous-sols, gisements et carrières",
+  "parent": "222"
+ },
+ {
+  "level": "paragraphe",
+  "code": "223",
+  "label": "PLANTATION ET FORÊTS",
+  "parent": "22"
+ },
+ {
+  "level": "rubrique",
+  "code": "223000",
+  "label": "Plantations et forêts",
+  "parent": "223"
+ },
+ {
+  "level": "paragraphe",
+  "code": "224",
+  "label": "PLANS D’EAU",
+  "parent": "22"
+ },
+ {
+  "level": "rubrique",
+  "code": "224000",
+  "label": "Plans d'eau",
+  "parent": "224"
+ },
+ {
+  "level": "article",
+  "code": "23",
+  "label": "IMMEUBLES",
+  "parent": "DEP-T4"
+ },
+ {
+  "level": "paragraphe",
+  "code": "231",
+  "label": "BÂTIMENTS ADMINISTRATIFS À USAGE DE BUREAU",
+  "parent": "23"
+ },
+ {
+  "level": "rubrique",
+  "code": "231000",
+  "label": "Bâtiments administratifs à usage de bureau",
+  "parent": "231"
+ },
+ {
+  "level": "paragraphe",
+  "code": "232",
+  "label": "BÂTIMENTS ADMINISTRATIFS À USAGE DE LOGEMENT",
+  "parent": "23"
+ },
+ {
+  "level": "rubrique",
+  "code": "232000",
+  "label": "Bâtiments administratifs à usage de logement",
+  "parent": "232"
+ },
+ {
+  "level": "paragraphe",
+  "code": "233",
+  "label": "BÂTIMENTS ADMINISTRATIFS À USAGE TECHNIQUE",
+  "parent": "23"
+ },
+ {
+  "level": "rubrique",
+  "code": "233000",
+  "label": "Bâtiments administratifs à usage technique",
+  "parent": "233"
+ },
+ {
+  "level": "paragraphe",
+  "code": "234",
+  "label": "OUVRAGES",
+  "parent": "23"
+ },
+ {
+  "level": "rubrique",
+  "code": "234000",
+  "label": "Ouvrages",
+  "parent": "234"
+ },
+ {
+  "level": "paragraphe",
+  "code": "235",
+  "label": "INFRASTRUCTURES",
+  "parent": "23"
+ },
+ {
+  "level": "rubrique",
+  "code": "235000",
+  "label": "Infrastructures",
+  "parent": "235"
+ },
+ {
+  "level": "paragraphe",
+  "code": "236",
+  "label": "RÉSEAUX INFORMATIQUES",
+  "parent": "23"
+ },
+ {
+  "level": "rubrique",
+  "code": "236000",
+  "label": "Réseaux informatiques",
+  "parent": "236"
+ },
+ {
+  "level": "paragraphe",
+  "code": "239",
+  "label": "EN COURS",
+  "parent": "23"
+ },
+ {
+  "level": "rubrique",
+  "code": "239100",
+  "label": "Bâtiments en cours",
+  "parent": "239"
+ },
+ {
+  "level": "rubrique",
+  "code": "239200",
+  "label": "Ouvrages en cours",
+  "parent": "239"
+ },
+ {
+  "level": "rubrique",
+  "code": "239300",
+  "label": "Infrastructures en cours",
+  "parent": "239"
+ },
+ {
+  "level": "rubrique",
+  "code": "239400",
+  "label": "Réseaux informatiques en cours",
+  "parent": "239"
+ },
+ {
+  "level": "article",
+  "code": "24",
+  "label": "MOBILIER",
+  "parent": "DEP-T4"
+ },
+ {
+  "level": "paragraphe",
+  "code": "241",
+  "label": "MOBILIER ET MATÉRIEL DE LOGEMENT ET DE BUREAU",
+  "parent": "24"
+ },
+ {
+  "level": "rubrique",
+  "code": "241000",
+  "label": "Mobilier et matériel de logement et de bureau",
+  "parent": "241"
+ },
+ {
+  "level": "paragraphe",
+  "code": "242",
+  "label": "MATÉRIEL INFORMATIQUE DE BUREAU",
+  "parent": "24"
+ },
+ {
+  "level": "rubrique",
+  "code": "242000",
+  "label": "Matériel informatique de bureau",
+  "parent": "242"
+ },
+ {
+  "level": "paragraphe",
+  "code": "243",
+  "label": "MATÉRIEL DE TRANSPORT DE SERVICE ET DE FONCTION",
+  "parent": "24"
+ },
+ {
+  "level": "rubrique",
+  "code": "243000",
+  "label": "Matériel de transport de service et de fonction",
+  "parent": "243"
+ },
+ {
+  "level": "paragraphe",
+  "code": "244",
+  "label": "MATÉRIEL ET OUTILLAGE TECHNIQUES",
+  "parent": "24"
+ },
+ {
+  "level": "rubrique",
+  "code": "244000",
+  "label": "Matériel et outillage techniques",
+  "parent": "244"
+ },
+ {
+  "level": "paragraphe",
+  "code": "245",
+  "label": "MATÉRIEL DE TRANSPORT EN COMMUN ET DE MARCHANDISES",
+  "parent": "24"
+ },
+ {
+  "level": "rubrique",
+  "code": "245000",
+  "label": "Matériel de transport en commun et de marchandises",
+  "parent": "245"
+ },
+ {
+  "level": "paragraphe",
+  "code": "246",
+  "label": "OBJETS DE VALEUR - COLLECTIONS - ŒUVRES D’ART",
+  "parent": "24"
+ },
+ {
+  "level": "rubrique",
+  "code": "246000",
+  "label": "Objets de valeur - collections - œuvres d’art",
+  "parent": "246"
+ },
+ {
+  "level": "paragraphe",
+  "code": "247",
+  "label": "STOCKS STRATÉGIQUES OU D’URGENCE",
+  "parent": "24"
+ },
+ {
+  "level": "rubrique",
+  "code": "247000",
+  "label": "Stocks stratégiques ou d’urgence",
+  "parent": "247"
+ },
+ {
+  "level": "paragraphe",
+  "code": "248",
+  "label": "CHEPTEL",
+  "parent": "24"
+ },
+ {
+  "level": "rubrique",
+  "code": "248000",
+  "label": "Cheptel",
+  "parent": "248"
+ },
+ {
+  "level": "article",
+  "code": "25",
+  "label": "EQUIPEMENTS MILITAIRES",
+  "parent": "DEP-T4"
+ },
+ {
+  "level": "paragraphe",
+  "code": "251",
+  "label": "BASES MILITAIRES",
+  "parent": "25"
+ },
+ {
+  "level": "rubrique",
+  "code": "251000",
+  "label": "Bases militaires",
+  "parent": "251"
+ },
+ {
+  "level": "paragraphe",
+  "code": "252",
+  "label": "OUVRAGES ET INFRASTRUCTURES MILITAIRES",
+  "parent": "25"
+ },
+ {
+  "level": "rubrique",
+  "code": "252000",
+  "label": "Ouvrages et infrastructures militaires",
+  "parent": "252"
+ },
+ {
+  "level": "paragraphe",
+  "code": "253",
+  "label": "MOBILIERS, MATÉRIELS MILITAIRES ET ÉQUIPEMENTS",
+  "parent": "25"
+ },
+ {
+  "level": "rubrique",
+  "code": "253000",
+  "label": "Mobiliers, matériels militaires et équipements",
+  "parent": "253"
+ },
+ {
+  "level": "article",
+  "code": "26",
+  "label": "PRISES DE PARTICIPATIONS ET CAUTIONNEMENTS",
+  "parent": "DEP-T4"
+ },
+ {
+  "level": "paragraphe",
+  "code": "261",
+  "label": "PRISES DE PARTICIPATION À L'INTÉRIEUR DE LA COMMUNAUTÉ",
+  "parent": "26"
+ },
+ {
+  "level": "rubrique",
+  "code": "261000",
+  "label": "Prises de participation à l'intérieur de la communauté",
+  "parent": "261"
+ },
+ {
+  "level": "paragraphe",
+  "code": "262",
+  "label": "PRISES DE PARTICIPATION À L’EXTÉRIEUR DE LA COMMUNAUTÉ",
+  "parent": "26"
+ },
+ {
+  "level": "rubrique",
+  "code": "262000",
+  "label": "Prises de participation à l’extérieur de la communauté",
+  "parent": "262"
+ },
+ {
+  "level": "article",
+  "code": "FR-15",
+  "label": "EMPRUNTS PROJETS",
+  "parent": null
+ },
+ {
+  "level": "paragraphe",
+  "code": "FR-151",
+  "label": "EMPRUNTS PROJETS",
+  "parent": "FR-15"
+ },
+ {
+  "level": "rubrique",
+  "code": "FR-151100",
+  "label": "Emprunts projets des Etats membres",
+  "parent": "FR-151"
+ },
+ {
+  "level": "rubrique",
+  "code": "FR-151200",
+  "label": "Emprunts projets des Partenaires Techniques et Financiers",
+  "parent": "FR-151"
+ },
+ {
+  "level": "rubrique",
+  "code": "FR-151300",
+  "label": "Emprunts projets autres organismes et institutions",
+  "parent": "FR-151"
+ },
+ {
+  "level": "article",
+  "code": "FR-16",
+  "label": "EMPRUNTS PROGRAMMES",
+  "parent": null
+ },
+ {
+  "level": "paragraphe",
+  "code": "FR-161",
+  "label": "EMPRUNTS PROGRAMMES",
+  "parent": "FR-16"
+ },
+ {
+  "level": "rubrique",
+  "code": "FR-161100",
+  "label": "Emprunts programmes des Etats membres",
+  "parent": "FR-161"
+ },
+ {
+  "level": "rubrique",
+  "code": "FR-161200",
+  "label": "Emprunts programmes des Partenaires Techniques et Financiers",
+  "parent": "FR-161"
+ },
+ {
+  "level": "rubrique",
+  "code": "FR-161300",
+  "label": "Emprunts programmes autres organismes et institutions",
+  "parent": "FR-161"
+ },
+ {
+  "level": "article",
+  "code": "FR-17",
+  "label": "AUTRES EMPRUNTS",
+  "parent": null
+ },
+ {
+  "level": "paragraphe",
+  "code": "FR-171",
+  "label": "AUTRES EMPRUNTS",
+  "parent": "FR-17"
+ },
+ {
+  "level": "rubrique",
+  "code": "FR-171100",
+  "label": "Autres emprunts auprès des Etats membres",
+  "parent": "FR-171"
+ },
+ {
+  "level": "rubrique",
+  "code": "FR-171200",
+  "label": "Autres emprunts auprès des Partenaires Techniques et Financiers",
+  "parent": "FR-171"
+ },
+ {
+  "level": "rubrique",
+  "code": "FR-171300",
+  "label": "Autres emprunts auprès des autres organismes et institutions",
+  "parent": "FR-171"
+ },
+ {
+  "level": "article",
+  "code": "FR-26",
+  "label": "CAUTIONNEMENTS",
+  "parent": null
+ },
+ {
+  "level": "paragraphe",
+  "code": "FR-264",
+  "label": "REMBOURSEMENT DE CAUTIONNEMENTS",
+  "parent": "FR-26"
+ },
+ {
+  "level": "rubrique",
+  "code": "FR-264000",
+  "label": "Remboursement de cautionnements",
+  "parent": "FR-264"
+ },
+ {
+  "level": "article",
+  "code": "FR-27",
+  "label": "REMBOURSEMENT DES PRETS ET AVANCES",
+  "parent": null
+ },
+ {
+  "level": "paragraphe",
+  "code": "FR-271",
+  "label": "DE LA COMMUNAUTÉ",
+  "parent": "FR-27"
+ },
+ {
+  "level": "rubrique",
+  "code": "FR-271000",
+  "label": "Remboursements Avances et prêts aux personnels de la communauté",
+  "parent": "FR-271"
+ },
+ {
+  "level": "paragraphe",
+  "code": "FR-272",
+  "label": "SPÉCIALISÉES DE LA COMMUNAUTÉ",
+  "parent": "FR-27"
+ },
+ {
+  "level": "rubrique",
+  "code": "FR-272000",
+  "label": "communauté",
+  "parent": "FR-272"
+ },
+ {
+  "level": "paragraphe",
+  "code": "FR-275",
+  "label": "REMBOURSEMENT AUTRES PRÊTS INTÉRIEURS",
+  "parent": "FR-27"
+ },
+ {
+  "level": "rubrique",
+  "code": "FR-275000",
+  "label": "REMBOURSEMENT Autres prêts intérieurs",
+  "parent": "FR-275"
+ },
+ {
+  "level": "article",
+  "code": "FB-15",
+  "label": "REMBOURSEMENT DES EMPRUNTS PROJETS",
+  "parent": null
+ },
+ {
+  "level": "paragraphe",
+  "code": "FB-151",
+  "label": "REMBOURSEMENT DES EMPRUNTS PROJETS",
+  "parent": "FB-15"
+ },
+ {
+  "level": "rubrique",
+  "code": "FB-151100",
+  "label": "Remboursement des Emprunts projets des Etats membres",
+  "parent": "FB-151"
+ },
+ {
+  "level": "rubrique",
+  "code": "FB-151200",
+  "label": "Financiers",
+  "parent": "FB-151"
+ },
+ {
+  "level": "rubrique",
+  "code": "FB-151300",
+  "label": "Remboursement des Emprunts projets autres organismes et institutions",
+  "parent": "FB-151"
+ },
+ {
+  "level": "article",
+  "code": "FB-16",
+  "label": "REMBOURSEMENT DES EMPRUNTS PROGRAMMES",
+  "parent": null
+ },
+ {
+  "level": "paragraphe",
+  "code": "FB-161",
+  "label": "REMBOURSEMENT DES EMPRUNTS PROGRAMMES",
+  "parent": "FB-16"
+ },
+ {
+  "level": "rubrique",
+  "code": "FB-161100",
+  "label": "Remboursement des Emprunts programmes des Etats membres",
+  "parent": "FB-161"
+ },
+ {
+  "level": "rubrique",
+  "code": "FB-161200",
+  "label": "Techniques et Financiers",
+  "parent": "FB-161"
+ },
+ {
+  "level": "rubrique",
+  "code": "FB-161300",
+  "label": "institutions",
+  "parent": "FB-161"
+ },
+ {
+  "level": "article",
+  "code": "FB-17",
+  "label": "REMBOURSEMENT DES AUTRES EMPRUNTS",
+  "parent": null
+ },
+ {
+  "level": "paragraphe",
+  "code": "FB-171",
+  "label": "REMBOURSEMENT DES AUTRES EMPRUNTS",
+  "parent": "FB-17"
+ },
+ {
+  "level": "rubrique",
+  "code": "FB-171100",
+  "label": "Remboursement des Autres emprunts auprès des Etats membres",
+  "parent": "FB-171"
+ },
+ {
+  "level": "rubrique",
+  "code": "FB-171200",
+  "label": "Techniques et Financiers",
+  "parent": "FB-171"
+ },
+ {
+  "level": "rubrique",
+  "code": "FB-171300",
+  "label": "institutions",
+  "parent": "FB-171"
+ },
+ {
+  "level": "article",
+  "code": "FB-26",
+  "label": "PRISES DE PARTICIPATIONS ET CAUTIONNEMENTS",
+  "parent": null
+ },
+ {
+  "level": "paragraphe",
+  "code": "FB-264",
+  "label": "DEPOT DE CAUTIONNEMENTS",
+  "parent": "FB-26"
+ },
+ {
+  "level": "rubrique",
+  "code": "FB-264000",
+  "label": "Dépôt de cautionnements",
+  "parent": "FB-264"
+ },
+ {
+  "level": "article",
+  "code": "FB-27",
+  "label": "PRETS ET AVANCES",
+  "parent": null
+ },
+ {
+  "level": "paragraphe",
+  "code": "FB-271",
+  "label": "AVANCES ET PRÊTS AUX PERSONNELS DE LA COMMUNAUTÉ",
+  "parent": "FB-27"
+ },
+ {
+  "level": "rubrique",
+  "code": "FB-271000",
+  "label": "Avances et prêts aux personnels de la communauté",
+  "parent": "FB-271"
+ },
+ {
+  "level": "paragraphe",
+  "code": "FB-272",
+  "label": "COMMUNAUTÉ",
+  "parent": "FB-27"
+ },
+ {
+  "level": "rubrique",
+  "code": "FB-272000",
+  "label": "Prêts aux organes et institutions spécialisées de la communauté",
+  "parent": "FB-272"
+ },
+ {
+  "level": "paragraphe",
+  "code": "FB-275",
+  "label": "AUTRES PRÊTS INTÉRIEURS",
+  "parent": "FB-27"
+ },
+ {
+  "level": "rubrique",
+  "code": "FB-275000",
+  "label": "Autres prêts intérieurs",
+  "parent": "FB-275"
+ }
+]

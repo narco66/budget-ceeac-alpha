@@ -36,7 +36,7 @@ return new class extends Migration
             $table->foreignUuid('fiscal_year_id')->constrained('fiscal_years');
             $table->foreignUuid('budget_line_id')->constrained('budget_lines');
             $table->foreignUuid('organization_unit_id')->constrained('organization_units');
-            $table->foreignUuid('parent_id')->nullable()->constrained('need_requests');
+            $table->uuid('parent_id')->nullable();
             $table->string('reference')->unique();
             $table->unsignedInteger('version_number')->default(1);
             $table->string('circuit_code');
@@ -48,6 +48,10 @@ return new class extends Migration
             $table->foreignUuid('workflow_instance_id')->nullable()->constrained('workflow_instances');
             $table->timestamps();
             $table->index(['fiscal_year_id', 'status', 'organization_unit_id']);
+        });
+
+        Schema::table('need_requests', function (Blueprint $table) {
+            $table->foreign('parent_id')->references('id')->on('need_requests')->nullOnDelete();
         });
 
         Schema::create('need_request_lines', function (Blueprint $table) {

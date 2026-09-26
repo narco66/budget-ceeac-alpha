@@ -16,7 +16,7 @@ class OrganizationSeeder extends Seeder
                 'label' => 'Référentiel organisationnel consolidé — juin 2026',
                 'status' => 'proposed',
                 'effective_on' => '2026-06-01',
-                'note' => 'Document de travail consolidé. Les codes sont applicatifs et restent à valider par l’autorité compétente.',
+                'note' => 'Référentiel de juin 2026, relu sur le PDF consolidé. Les codes restent applicatifs et à valider. Le Secrétariat général remplace le secrétariat administratif.',
             ],
         );
 

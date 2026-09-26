@@ -60,7 +60,7 @@ export function ExercicePage() {
       <header>
         <h1 className="font-serif text-3xl text-navy-900">Exercice et circuits</h1>
         <p className="mt-1 text-sm text-slate-600">
-          Référentiels de travail. Les montants du Budget 2026 ne sont pas chargés.
+          Référentiels de l’exercice. La nomenclature par nature est chargée. Les crédits de l’annexe restent dans la gestion du budget, en brouillon.
         </p>
       </header>
       {(years.isLoading || detail.isLoading) && <LoadingState label="Chargement de l’exercice…" />}

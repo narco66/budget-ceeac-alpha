@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
             SodRuleSeeder::class,
             OrganizationSeeder::class,
             ReferentialSeeder::class,
+            OfficialBudget2026Seeder::class,
         ]);
 
         $email = env('GESBUDEP_ADMIN_EMAIL');
