@@ -6,26 +6,9 @@ La vérité métier est le cahier des charges v5.0 du 26 septembre 2026 (`docs/`
 
 ## État actuel
 
-| Phase | État |
-| --- | --- |
-| 0 Audit documentaire | Fait — `docs/generated/` |
-| 1 Architecture | Fait — mêmes documents |
-| 2 Socle d’identité (API) | Fait et testé. PostgreSQL n’est pas encore installé sur ce poste : les tests s’exécutent sur SQLite en mémoire. |
-| 3 Frontend de production | Fait. Connexion réelle, menu, états vide et interdit. La maquette Figma n’est pas l’application. |
-| 4 Référentiels | Fait pour l’exercice 2026, les circuits, les séquences et le seuil de 5 000 000 XAF. Aucun compte du Budget 2026 n’est chargé. |
-| 5 Budget | Moteur en place : versions, journal de soldes, mouvements, import refusé si les totaux de contrôle divergent. Le Budget 2026 n’est pas promu. |
-| 6 Expression de besoin | Circuits hors PAP, PAP technique et PAP appui. Sous-lignes contrôlées. Un seul engagement à la validation. Aucun dossier ouvert tant que l’exercice n’est pas exécutoire. |
-| 7 Engagement | Instruction budget, réservation au visa du directeur, engagement ferme au visa du contrôleur financier, partiels et dégagement. La liquidation créée n’est pas encore instruite. L’écran local est vide. |
-| 8 Liquidation | Décompte, service fait, facture et cumul plafonné par l’engagement net. Le visa ouvre une coquille d’ordonnancement, sans l’instruire. L’écran local est vide. |
-| 9 Ordonnancement | Seuil copié sur l’acte, signature du Secrétaire général ou du Président, transmission à l’Agence comptable. La prise en charge ouvre le paiement. L’écran local est vide. |
-| 10 Paiement | Virement, chèque ou caisse après prise en charge. Preuve exigée à l’exécution. Un rejet ne compte pas comme payé. L’écran local est vide. |
-| 11 Transversal | Tiers, contrats, GED, notifications et observations. Aucun seuil de marché, aucun indicateur GAR/RBM et aucune trésorerie ne sont inventés. Les écrans locaux sont vides. |
-| 12 Tableaux de bord | Indicateurs calculés sur les écritures du périmètre. Sans crédit exécutoire, le taux n’est pas calculé. Le Budget 2026 n’est pas recopié. |
-| 13 PDF | Fiche EB, bon, certificat, attestation, état de liquidation, ordre de paiement et avis de paiement, scellés une fois dans la GED. |
-| 14 Tests globaux | Suite PHPUnit, tests Vitest, et Playwright sur les refus de connexion et les écrans vides. La concurrence parallèle attend PostgreSQL. |
-| 15 Optimisation | Index de lecture, listes groupées, en-têtes de sécurité, lien clavier vers le contenu, file pour les notifications. |
+La chaîne de dépense est opérable dans l’API et couverte par les tests. Le dossier numérique retrouve un acte par sa référence et affiche la filiation jusqu’au paiement. L’exercice local est en préparation et aucune ligne du Budget 2026 n’est chargée : les écrans connectés affichent zéro écriture. PostgreSQL n’est pas installé sur ce poste.
 
-Le détail est dans `docs/generated/IMPLEMENTATION_STATUS.md`.
+Le constat, y compris ce qui reste fermé, est dans `docs/generated/FINAL_AUDIT.md`. Le journal des phases est dans `docs/generated/IMPLEMENTATION_STATUS.md`.
 
 ## Prérequis
 
@@ -50,20 +33,31 @@ GESBUDEP_ADMIN_EMAIL=admin@ceeac.local
 GESBUDEP_ADMIN_PASSWORD=un-mot-de-passe-local
 ```
 
-Sans PostgreSQL, les tests restent exécutables :
+Les tests n’ont pas besoin de PostgreSQL. Ils utilisent SQLite en mémoire :
 
 ```bash
 php artisan test
 ```
 
-Avec PostgreSQL installé, créer la base `gesbudep`, aligner `DB_*` sur `.env.example`, puis :
+Tant que PostgreSQL n’est pas installé, l’API locale peut démarrer sur un fichier SQLite. Ce n’est pas la base d’exploitation, et MySQL ne la remplace pas. Dans `.env` :
+
+```text
+DB_CONNECTION=sqlite
+DB_DATABASE=database/database.sqlite
+```
+
+Créer le fichier s’il n’existe pas, puis :
 
 ```bash
 php artisan migrate
 php artisan db:seed
-php artisan serve
+php artisan serve --host=127.0.0.1 --port=8000
 php artisan queue:work
 ```
+
+Ne pas lancer `migrate:fresh` lorsque cette base contient déjà des données utiles.
+
+Avec PostgreSQL installé, créer la base `gesbudep`, aligner `DB_*` sur `.env.example`, puis exécuter les mêmes commandes `migrate`, `db:seed`, `serve` et `queue:work`.
 
 `queue:work` délivre les notifications nées des tâches ouvertes. Les échecs restent dans `failed_jobs`. Les actes financiers et leurs PDF ne passent pas par cette file.
 
@@ -75,7 +69,7 @@ Connexion : `POST http://localhost:8000/api/v1/auth/login` avec `email` et `pass
 ```bash
 cd frontend
 npm install
-npm run dev
+npx vite --host=127.0.0.1 --port=5173
 ```
 
 L’interface est servie sur `http://127.0.0.1:5173` et appelle l’API via le préfixe `/api`.
@@ -99,6 +93,8 @@ Le parcours connecté lit `GESBUDEP_ADMIN_EMAIL` et `GESBUDEP_ADMIN_PASSWORD` da
 - `docs/generated/IMPLEMENTATION_PLAN.md`
 - `docs/generated/ARCHITECTURE.md`
 - `docs/generated/DATABASE.md`
+- `docs/generated/DOMAIN_MODEL.md`
 - `docs/generated/WORKFLOWS.md`
 - `docs/generated/SECURITY.md`
 - `docs/generated/DECISIONS.md`
+- `docs/generated/FINAL_AUDIT.md`

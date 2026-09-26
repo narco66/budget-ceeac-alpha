@@ -1,7 +1,7 @@
 # Modèle de domaine — BUDGET-CEEAC / GESBUDEP
 
 **Date :** 26 septembre 2026  
-**Source :** cahier v5.0 §30, référentiel organisationnel, Budget 2026
+**Source :** cahier v5.0 §30, référentiel organisationnel, Budget 2026. Les agrégats de planification, de trésorerie et de clôture ci-dessous restent une cible : ils ne sont pas chargés. Le constat est dans `FINAL_AUDIT.md`.
 
 ## 1. Agrégats
 

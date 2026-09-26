@@ -5,7 +5,7 @@
 
 Légende : **Absente** = ni écran réel ni persistance. **Maquette** = écran Figma sur données simulées, sans règle serveur. **Partielle** = élément documenté mais incomplet ou contradictoire entre sources.
 
-Aucune fonctionnalité métier n’est implémentée. L’écart global est donc « maquette visuelle complète, système absent ».
+Le tableau de la section 2 est le constat de la phase 0, lorsque l’application métier n’existait pas. L’état au 26 septembre 2026, après les phases 0 à 15, est dans `FINAL_AUDIT.md`. La chaîne de dépense, les pièces scellées et les tableaux de bord calculés existent. PostgreSQL, le Budget 2026 tabulaire, le GAR/RBM, les seuils de marchés, le MFA, le QR et les états de clôture restent fermés.
 
 ## 1. Synthèse
 

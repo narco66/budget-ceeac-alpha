@@ -8,6 +8,7 @@ import { ContractsPage } from '../pages/ContractsPage'
 import { DashboardPage } from '../pages/DashboardPage'
 import { ExecutivePage } from '../pages/ExecutivePage'
 import { DocumentsPage } from '../pages/DocumentsPage'
+import { DossierPage } from '../pages/DossierPage'
 import { FindingsPage } from '../pages/FindingsPage'
 import { ExercicePage } from '../pages/ExercicePage'
 import { ForgotPasswordPage } from '../pages/ForgotPasswordPage'
@@ -43,6 +44,7 @@ export function AppRouter() {
         <Route path="tiers" element={<PartiesPage />} />
         <Route path="marches" element={<ContractsPage />} />
         <Route path="ged" element={<DocumentsPage />} />
+        <Route path="dossier" element={<DossierPage />} />
         <Route path="controle" element={<FindingsPage />} />
         <Route path="cloture" element={<ClosurePage />} />
         <Route

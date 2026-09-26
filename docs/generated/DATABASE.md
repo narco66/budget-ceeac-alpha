@@ -1,7 +1,7 @@
 # Base de données — BUDGET-CEEAC / GESBUDEP
 
 **Date :** 26 septembre 2026  
-**Moteur :** PostgreSQL. Les types ci-dessous sont la cible des migrations Laravel. Aucune base n’est encore créée.
+**Moteur :** PostgreSQL reste la cible. Les migrations existent. Sur ce poste, les tests tournent sur SQLite en mémoire et l’API locale peut tourner sur un fichier SQLite. Cette base n’est pas l’exploitation. Le schéma réel et les écarts sont dans `FINAL_AUDIT.md`.
 
 ## 1. Conventions
 

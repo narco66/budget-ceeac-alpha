@@ -7,3 +7,4 @@
 5. Ne pas lancer `migrate:fresh` sur une base qui contient des données institutionnelles.
 6. Les questions non tranchées vont dans `docs/generated/OPEN_QUESTIONS.md`, avec la décision provisoire.
 7. Mettre à jour `docs/generated/IMPLEMENTATION_STATUS.md` à la fin d’une phase.
+8. L’état livré et les sujets encore fermés sont dans `docs/generated/FINAL_AUDIT.md`.

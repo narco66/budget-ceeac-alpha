@@ -18,3 +18,5 @@
 - PDF officiels : produits à la validation de l’acte, scellés dans la GED, téléchargeables, sans régénération sous le même identifiant.
 - Tests globaux : suite PHPUnit, tests Vitest, refus de connexion et parcours des écrans vides sous Playwright. Le verrou concurrent n’est pas déclaré concluant sur SQLite.
 - Optimisation : index de lecture, listes sans relecture ligne à ligne, en-têtes de sécurité, lien clavier vers le contenu, notifications déposées dans la file.
+- Documentation finale : audit de livraison, mode opératoire local et renvois dans les documents de conception. Les sujets sans source restent fermés.
+- Dossier financier unifié : recherche et filiation EB → PAI sur les actes existants. Observations, contrats et suivi-évaluation ne sont pas rattachés artificiellement.

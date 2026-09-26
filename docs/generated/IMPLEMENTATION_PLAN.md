@@ -129,7 +129,11 @@ Fait pour les lectures de la chaîne, les en-têtes, le clavier et la file des n
 
 ### Phase 16 — Documentation finale
 
-Mise à jour de tous les documents `docs/generated/`, `FINAL_AUDIT.md`, README opérable.
+Fait : `FINAL_AUDIT.md`, README opérable, et renvois dans les documents `docs/generated/`. L’audit de la phase 0 est conservé comme constat historique. Les sujets fermés ne sont pas déclarés livrés.
+
+### Suite — Dossier financier unifié
+
+Fait pour le cahier §58 sur les actes déjà écrits. La recherche retrouve une expression par son numéro ou par celui de l’engagement, de la liquidation, de l’ordonnancement, du paiement, de la facture, du fournisseur, de la ligne ou de la structure. Le contrat trouvé n’est pas présenté comme une dépense rattachée. Les observations et le suivi-évaluation restent sans lien.
 
 ## 3. Risques
 

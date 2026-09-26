@@ -223,6 +223,34 @@
 | Décisions | ADR-024 |
 | Travaux restants | Phase 16 : documentation finale. |
 
+## Phase 16 — Documentation finale
+
+| Rubrique | Contenu |
+| --- | --- |
+| Statut | DONE |
+| Fonctions implémentées | Aucune règle métier nouvelle. L’audit final dit ce qui s’exécute, ce qui est prouvé, et ce qui reste fermé. Le README décrit le lancement sur SQLite local et sur PostgreSQL. Les documents de conception renvoient à cet audit sans être réécrits comme s’ils dataient d’après le code. |
+| Fichiers créés | `docs/generated/FINAL_AUDIT.md` |
+| Migrations | Aucune. |
+| Tests | Aucune suite nouvelle. Les chiffres cités sont ceux de la phase 15 : 59 réussites PHPUnit, 1 test ignoré, 615 assertions, 4 tests Vitest, 2 parcours Playwright. |
+| Résultats | Les sujets sans source institutionnelle restent nommés comme fermés. |
+| Problèmes | PostgreSQL, Budget 2026 tabulaire, MFA, seuils de marchés, QR et clôture restent ouverts. |
+| Décisions | Aucune nouvelle. ADR-012 à ADR-024 restent en vigueur. |
+| Travaux restants | Installer PostgreSQL et rejouer la concurrence. Charger le Budget 2026 seulement après un mapping contrôlé. |
+
+## Suite — Dossier financier unifié
+
+| Rubrique | Contenu |
+| --- | --- |
+| Statut | DONE pour la filiation des actes existants. |
+| Fonctions implémentées | `GET /api/v1/dossiers` et `GET /api/v1/dossiers/{reference}`. Le périmètre est celui du tableau de bord. Un contrat retrouvé indique qu’aucune dépense n’y est rattachée. Les observations et le suivi-évaluation ne sont pas inventés comme liens. |
+| Fichiers créés | `DossierService`, `DossierController`, `DossierPage`. |
+| Migrations | Aucune. |
+| Tests | `DossierApiTest` : la facture retrouve l’expression, une autre structure ne la voit pas, le contrat reste détaché. |
+| Résultats | L’écran local n’affiche un dossier que si un acte existe. |
+| Problèmes | Pas de rattachement observation, contrat ou GAR/RBM. |
+| Décisions | Aucune nouvelle. Le lien manquant est dit à l’écran. |
+| Travaux restants | PostgreSQL, Budget 2026 tabulaire, et les sujets fermés de l’audit. |
+
 ## Phases suivantes
 
 | Phase | Statut |
@@ -242,4 +270,4 @@
 | 13 PDF | DONE pour les pièces de la chaîne, scellées dans la GED. QR, procès-verbal et états de clôture reportés. |
 | 14 Tests globaux | DONE pour PHPUnit, Vitest et Playwright. Concurrence parallèle BLOCKED sans PostgreSQL. |
 | 15 Optimisation | DONE pour les index, les lectures groupées, les en-têtes, le clavier et la file de notification. |
-| 16 Documentation finale | TODO |
+| 16 Documentation finale | DONE. `FINAL_AUDIT.md` et README opérable. Les manques institutionnels restent nommés. |
