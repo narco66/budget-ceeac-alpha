@@ -61,16 +61,21 @@ class ReferentialApiTest extends TestCase
             ->assertJsonPath('data.periods.0.status', 'not_opened');
     }
 
-    public function test_nomenclature_shell_contains_no_accounts(): void
+    public function test_economic_nomenclature_is_loaded_from_the_annex(): void
     {
         $this->actAsAdministrator();
 
+        $expected = json_decode((string) file_get_contents(database_path('data/nomenclature-nature-2026.json')), true, 512, JSON_THROW_ON_ERROR);
+
         $this->getJson('/api/v1/nomenclature-versions')
             ->assertOk()
-            ->assertJsonPath('data.0.code', 'NOM-PREP-2026')
-            ->assertJsonPath('data.0.items_count', 0);
+            ->assertJsonPath('data.0.code', 'NOM-NATURE-2026')
+            ->assertJsonPath('data.0.items_count', count($expected));
 
-        $this->assertSame(0, NomenclatureItem::query()->count());
+        $angola = NomenclatureItem::query()->where('code', '721010')->first();
+        $this->assertNotNull($angola);
+        $this->assertSame('République d\'Angola', $angola->label);
+        $this->assertSame('721', $angola->parent?->code);
     }
 
     public function test_threshold_and_sequences_are_exposed_as_integers(): void

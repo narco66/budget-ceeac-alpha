@@ -3,6 +3,8 @@
 **Date :** 26 septembre 2026  
 **Règle :** une ambiguïté non tranchée par le cahier v5.0, les procédures ou les référentiels est consignée ici. Le développement des parties déjà tranchées continue. Aucune de ces questions n’autorise à inventer une règle silencieuse.
 
+**Suite au 26 septembre 2026 :** les décisions provisoires Q2, Q4, Q8, Q9, Q12, Q14 et Q15 ont été tenues dans le code (organigramme proposé, budget non chargé, coquille de liquidation, ordonnancement non groupé, compte technique local, seuils de marchés vides, logo JPEG). Elles ne sont pas closes : la validation institutionnelle manque toujours. Q7 n’a pas reçu de durée. Q10 n’a pas de second facteur. Q11 bloque l’exploitation. Le constat complet est dans `FINAL_AUDIT.md`.
+
 ## Q1 — Validation institutionnelle du cahier v5.0
 
 - **Constat :** le cahier se déclare « baseline fonctionnelle enrichie proposée pour validation ».

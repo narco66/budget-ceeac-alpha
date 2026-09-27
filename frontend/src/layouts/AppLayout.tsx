@@ -24,6 +24,12 @@ export function AppLayout() {
 
   return (
     <div className="flex h-full overflow-hidden">
+      <a
+        href="#contenu"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:rounded-lg focus:bg-white focus:px-3 focus:py-2 focus:text-sm focus:font-semibold focus:text-navy-900"
+      >
+        Aller au contenu
+      </a>
       <Sidebar user={user} collapsed={collapsed} onToggle={() => setCollapsed((value) => !value)} />
       <div className="flex min-w-0 flex-1 flex-col">
         <TopBar
@@ -32,7 +38,7 @@ export function AppLayout() {
             void logout().then(() => navigate('/'))
           }}
         />
-        <main className="flex-1 overflow-auto bg-canvas p-4 md:p-6">
+        <main id="contenu" tabIndex={-1} className="flex-1 overflow-auto bg-canvas p-4 outline-none md:p-6">
           <Outlet />
         </main>
       </div>

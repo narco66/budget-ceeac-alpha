@@ -24,13 +24,17 @@ return new class extends Migration
         Schema::create('party_bank_accounts', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->foreignUuid('party_id')->constrained('parties');
-            $table->foreignUuid('supersedes_id')->nullable()->constrained('party_bank_accounts');
+            $table->uuid('supersedes_id')->nullable();
             $table->string('bank_name');
             $table->string('account_number');
             $table->string('status');
             $table->foreignUuid('created_by')->constrained('users');
             $table->foreignUuid('activated_by')->nullable()->constrained('users');
             $table->timestamps();
+        });
+
+        Schema::table('party_bank_accounts', function (Blueprint $table) {
+            $table->foreign('supersedes_id')->references('id')->on('party_bank_accounts')->nullOnDelete();
         });
 
         Schema::create('procurement_thresholds', function (Blueprint $table) {

@@ -29,10 +29,15 @@ class IdentityApiTest extends TestCase
 
     public function test_health_reports_database_up(): void
     {
-        $this->getJson('/api/v1/health')
+        $this->getJson('/api/v1/health', ['X-Request-Id' => 'trace-phase15'])
             ->assertOk()
             ->assertJsonPath('success', true)
-            ->assertJsonPath('data.database', 'up');
+            ->assertJsonPath('data.database', 'up')
+            ->assertHeader('X-Content-Type-Options', 'nosniff')
+            ->assertHeader('Referrer-Policy', 'no-referrer')
+            ->assertHeader('X-Frame-Options', 'DENY')
+            ->assertHeader('Content-Security-Policy', "frame-ancestors 'none'")
+            ->assertHeader('X-Request-Id', 'trace-phase15');
     }
 
     public function test_login_returns_token_and_writes_audit(): void

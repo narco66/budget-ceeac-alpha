@@ -2,6 +2,7 @@
 
 namespace App\Domain\Expenditure;
 
+use App\Domain\Documents\OfficialPdfPublisher;
 use App\Domain\Identity\SegregationOfDuties;
 use App\Domain\Money\IntegerAmount;
 use App\Domain\Referentials\NumberSequenceAllocator;
@@ -24,6 +25,7 @@ class PaymentService
         private readonly SegregationOfDuties $segregation,
         private readonly NumberSequenceAllocator $allocator,
         private readonly PaymentWorkflow $workflow,
+        private readonly OfficialPdfPublisher $pdfs,
     ) {}
 
     /**
@@ -211,6 +213,10 @@ class PaymentService
             if ($target->code !== 'resultat') {
                 $this->openTask($locked, $instance, $target);
             }
+            if ($locked->status === 'executed') {
+                $ready = $locked->refresh();
+                $this->pdfs->publish($user, $ready, 'pai_avis', 'Avis de paiement '.$ready->reference);
+            }
 
             return $locked->refresh();
         });
@@ -265,12 +271,19 @@ class PaymentService
 
     private function sum(PaymentOrder $order, bool $executedOnly, ?string $exceptId): string
     {
-        $rows = Payment::query()
-            ->where('payment_order_id', $order->id)
-            ->when($executedOnly, fn ($query) => $query->where('status', 'executed'))
-            ->when(! $executedOnly, fn ($query) => $query->whereNotIn('status', ['rejected', 'blocked', 'cancelled']))
-            ->when($exceptId !== null, fn ($query) => $query->where('id', '!=', $exceptId))
-            ->pluck('amount_xaf');
+        if ($exceptId === null && $order->relationLoaded('payments')) {
+            $rows = $order->payments
+                ->when($executedOnly, fn ($items) => $items->where('status', 'executed'))
+                ->when(! $executedOnly, fn ($items) => $items->whereNotIn('status', ['rejected', 'blocked', 'cancelled']))
+                ->pluck('amount_xaf');
+        } else {
+            $rows = Payment::query()
+                ->where('payment_order_id', $order->id)
+                ->when($executedOnly, fn ($query) => $query->where('status', 'executed'))
+                ->when(! $executedOnly, fn ($query) => $query->whereNotIn('status', ['rejected', 'blocked', 'cancelled']))
+                ->when($exceptId !== null, fn ($query) => $query->where('id', '!=', $exceptId))
+                ->pluck('amount_xaf');
+        }
 
         $total = '0';
         foreach ($rows as $amount) {

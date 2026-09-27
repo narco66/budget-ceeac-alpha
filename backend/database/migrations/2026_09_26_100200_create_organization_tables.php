@@ -21,7 +21,7 @@ return new class extends Migration
         Schema::create('organization_units', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->foreignUuid('organization_version_id')->constrained('organization_versions')->cascadeOnDelete();
-            $table->foreignUuid('parent_id')->nullable()->constrained('organization_units')->nullOnDelete();
+            $table->uuid('parent_id')->nullable();
             $table->string('code');
             $table->string('name');
             $table->string('unit_type')->nullable();
@@ -30,6 +30,10 @@ return new class extends Migration
             $table->timestamps();
             $table->unique(['organization_version_id', 'code']);
             $table->index(['organization_version_id', 'parent_id']);
+        });
+
+        Schema::table('organization_units', function (Blueprint $table) {
+            $table->foreign('parent_id')->references('id')->on('organization_units')->nullOnDelete();
         });
     }
 

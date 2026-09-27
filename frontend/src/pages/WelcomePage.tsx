@@ -58,6 +58,12 @@ export function WelcomePage() {
 
   return (
     <div className="flex min-h-full">
+      <a
+        href="#connexion"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:rounded-lg focus:bg-white focus:px-3 focus:py-2 focus:text-sm focus:font-semibold focus:text-navy-900"
+      >
+        Aller au formulaire de connexion
+      </a>
       <section className="relative hidden w-[52%] flex-col overflow-hidden bg-linear-to-br from-navy-950 via-navy-900 to-navy-800 px-12 py-10 text-white lg:flex">
         <div className="flex items-center gap-4">
           <img src={logo} alt="Logo de la CEEAC" className="h-16 w-16 rounded-full bg-white object-cover ring-2 ring-white/20" />
@@ -136,7 +142,7 @@ export function WelcomePage() {
               </div>
             )}
 
-            <form className="space-y-5" onSubmit={onSubmit} noValidate>
+            <form id="connexion" className="space-y-5" onSubmit={onSubmit} noValidate>
               <div>
                 <label htmlFor="email" className="mb-1.5 block text-xs font-semibold text-slate-700">
                   Adresse email institutionnelle
@@ -145,10 +151,12 @@ export function WelcomePage() {
                   id="email"
                   type="email"
                   autoComplete="username"
+                  aria-invalid={form.formState.errors.email ? true : undefined}
+                  aria-describedby={form.formState.errors.email ? 'email-error' : undefined}
                   className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm shadow-sm"
                   {...form.register('email')}
                 />
-                {form.formState.errors.email && <p className="mt-1 text-xs text-red-700">{form.formState.errors.email.message}</p>}
+                {form.formState.errors.email && <p id="email-error" className="mt-1 text-xs text-red-700">{form.formState.errors.email.message}</p>}
               </div>
               <div>
                 <div className="mb-1.5 flex items-center justify-between">
@@ -160,6 +168,8 @@ export function WelcomePage() {
                     id="password"
                     type={showPassword ? 'text' : 'password'}
                     autoComplete="current-password"
+                    aria-invalid={form.formState.errors.password ? true : undefined}
+                    aria-describedby={form.formState.errors.password ? 'password-error' : undefined}
                     className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 pr-12 text-sm shadow-sm"
                     {...form.register('password')}
                   />
@@ -172,7 +182,7 @@ export function WelcomePage() {
                     {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
                   </button>
                 </div>
-                {form.formState.errors.password && <p className="mt-1 text-xs text-red-700">{form.formState.errors.password.message}</p>}
+                {form.formState.errors.password && <p id="password-error" className="mt-1 text-xs text-red-700">{form.formState.errors.password.message}</p>}
               </div>
               <label className="flex items-center gap-2 text-xs text-slate-500">
                 <input type="checkbox" {...form.register('remember')} />

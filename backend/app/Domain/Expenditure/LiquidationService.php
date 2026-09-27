@@ -2,6 +2,7 @@
 
 namespace App\Domain\Expenditure;
 
+use App\Domain\Documents\OfficialPdfPublisher;
 use App\Domain\Identity\SegregationOfDuties;
 use App\Domain\Money\IntegerAmount;
 use App\Domain\Referentials\NumberSequenceAllocator;
@@ -29,6 +30,7 @@ class LiquidationService
         private readonly LiquidationWorkflow $workflow,
         private readonly OrdonnancementWorkflow $ordonnancementWorkflow,
         private readonly OrdonnancementService $ordonnancement,
+        private readonly OfficialPdfPublisher $pdfs,
     ) {}
 
     /**
@@ -224,8 +226,15 @@ class LiquidationService
             if ($target->code !== 'cloture') {
                 $this->openTask($locked, $instance, $target);
             }
+            $ready = $locked->refresh();
+            if ($action === 'certify') {
+                $this->pdfs->publish($user, $ready, 'liq_attestation', 'Attestation de service fait '.$ready->reference);
+            }
+            if ($transition->effect === 'create_ord') {
+                $this->pdfs->publish($user, $ready, 'liq_etat', 'État de liquidation '.$ready->reference);
+            }
 
-            return $locked->refresh();
+            return $ready;
         });
     }
 
@@ -371,12 +380,19 @@ class LiquidationService
 
     private function sum(Commitment $commitment, bool $visedOnly, ?string $exceptId): string
     {
-        $rows = Liquidation::query()
-            ->where('commitment_id', $commitment->id)
-            ->when($visedOnly, fn ($query) => $query->where('status', 'vised'))
-            ->when(! $visedOnly, fn ($query) => $query->whereNotIn('status', ['visa_refused', 'cancelled']))
-            ->when($exceptId !== null, fn ($query) => $query->where('id', '!=', $exceptId))
-            ->pluck('amount_xaf');
+        if ($exceptId === null && $commitment->relationLoaded('liquidations')) {
+            $rows = $commitment->liquidations
+                ->when($visedOnly, fn ($items) => $items->where('status', 'vised'))
+                ->when(! $visedOnly, fn ($items) => $items->whereNotIn('status', ['visa_refused', 'cancelled']))
+                ->pluck('amount_xaf');
+        } else {
+            $rows = Liquidation::query()
+                ->where('commitment_id', $commitment->id)
+                ->when($visedOnly, fn ($query) => $query->where('status', 'vised'))
+                ->when(! $visedOnly, fn ($query) => $query->whereNotIn('status', ['visa_refused', 'cancelled']))
+                ->when($exceptId !== null, fn ($query) => $query->where('id', '!=', $exceptId))
+                ->pluck('amount_xaf');
+        }
 
         $total = '0';
         foreach ($rows as $amount) {

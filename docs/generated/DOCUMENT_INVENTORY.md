@@ -1,5 +1,7 @@
 # Inventaire documentaire — BUDGET-CEEAC / GESBUDEP
 
+Le présent inventaire est celui de la phase 0. Il n’a pas été réécrit. L’état du code au 26 septembre 2026 est dans `FINAL_AUDIT.md`.
+
 **Phase :** 0 — Audit documentaire  
 **Date :** 26 septembre 2026  
 **Périmètre analysé :** `docs/` (récursif) et racine du dépôt  

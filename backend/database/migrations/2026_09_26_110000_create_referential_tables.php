@@ -58,13 +58,17 @@ return new class extends Migration
         Schema::create('nomenclature_items', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->foreignUuid('nomenclature_version_id')->constrained('nomenclature_versions')->cascadeOnDelete();
-            $table->foreignUuid('parent_id')->nullable()->constrained('nomenclature_items')->nullOnDelete();
+            $table->uuid('parent_id')->nullable();
             $table->string('level');
             $table->string('code');
             $table->string('label');
             $table->boolean('is_active')->default(true);
             $table->timestamps();
             $table->unique(['nomenclature_version_id', 'code']);
+        });
+
+        Schema::table('nomenclature_items', function (Blueprint $table) {
+            $table->foreign('parent_id')->references('id')->on('nomenclature_items')->nullOnDelete();
         });
 
         Schema::create('workflow_definitions', function (Blueprint $table) {

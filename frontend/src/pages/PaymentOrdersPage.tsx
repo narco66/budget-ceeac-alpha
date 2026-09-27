@@ -43,7 +43,7 @@ export function PaymentOrdersPage() {
       {query.data && query.data.data.length === 0 && (
         <EmptyState
           title="Aucun ordonnancement"
-          description="Aucune liquidation visée n’a ouvert d’ordre. Le seuil, l’ordonnateur et la transmission apparaîtront ici. Aucun montant n’est simulé."
+          description="Aucune liquidation visée n’a ouvert d’ordre. L’ordre de paiement signé est archivé à la signature. Aucun montant n’est simulé."
         />
       )}
       {query.data && query.data.data.length > 0 && (

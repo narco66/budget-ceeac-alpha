@@ -72,6 +72,11 @@ class NeedRequest extends Model
         return $this->hasOne(Commitment::class);
     }
 
+    public function commitments(): HasMany
+    {
+        return $this->hasMany(Commitment::class);
+    }
+
     public function isEditable(): bool
     {
         return in_array($this->status, ['draft', 'returned'], true);

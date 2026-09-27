@@ -1,7 +1,7 @@
 # Workflows de référence — BUDGET-CEEAC / GESBUDEP
 
 **Date :** 26 septembre 2026  
-**Source :** cahier v5.0 §8 à §12. Les gardes de montant ne sont pas désactivables par le paramétrage du circuit.
+**Source :** cahier v5.0 §8 à §12. Les gardes de montant ne sont pas désactivables par le paramétrage du circuit. Les circuits EB, ENG, LIQ, ORD et PAI sont semés et testés. Le constat est dans `FINAL_AUDIT.md`.
 
 ## 1. Moteur
 

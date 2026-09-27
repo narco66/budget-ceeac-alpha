@@ -3,6 +3,7 @@
 namespace App\Domain\Expenditure;
 
 use App\Domain\Budget\BudgetBalance;
+use App\Domain\Documents\OfficialPdfPublisher;
 use App\Domain\Identity\SegregationOfDuties;
 use App\Domain\Money\IntegerAmount;
 use App\Domain\Referentials\NumberSequenceAllocator;
@@ -29,6 +30,7 @@ class EngagementService
         private readonly NumberSequenceAllocator $allocator,
         private readonly EngagementWorkflow $workflow,
         private readonly LiquidationWorkflow $liquidationWorkflow,
+        private readonly OfficialPdfPublisher $pdfs,
     ) {}
 
     public function reduce(User $user, Commitment $commitment, string $amount): Commitment
@@ -162,6 +164,11 @@ class EngagementService
             if ($target->code !== 'cloture') {
                 $this->openTask($locked, $instance, $target);
             }
+            if ($transition->effect === 'firm_commitment_and_liq_shell') {
+                $ready = $locked->refresh();
+                $this->pdfs->publish($user, $ready, 'eng_bon', 'Bon d’engagement '.$ready->reference);
+                $this->pdfs->publish($user, $ready, 'eng_certificat', 'Certificat d’engagement '.$ready->reference);
+            }
 
             return $locked->refresh();
         });
@@ -212,10 +219,12 @@ class EngagementService
         $released = '0';
         $committed = '0';
         $uncommitted = '0';
-        $events = BudgetEvent::query()
-            ->where('source_type', Commitment::class)
-            ->where('source_id', $commitment->id)
-            ->get();
+        $events = $commitment->relationLoaded('sourceBudgetEvents')
+            ? $commitment->getRelation('sourceBudgetEvents')
+            : BudgetEvent::query()
+                ->where('source_type', Commitment::class)
+                ->where('source_id', $commitment->id)
+                ->get();
 
         foreach ($events as $event) {
             $amount = IntegerAmount::assert((string) $event->amount_xaf);
@@ -358,11 +367,17 @@ class EngagementService
 
     private function activeTotal(NeedRequest $need, ?string $exceptId): string
     {
-        $rows = Commitment::query()
-            ->where('need_request_id', $need->id)
-            ->whereNotIn('status', ['visa_refused', 'cancelled'])
-            ->when($exceptId !== null, fn ($query) => $query->where('id', '!=', $exceptId))
-            ->pluck('amount_xaf');
+        if ($exceptId === null && $need->relationLoaded('siblingCommitments')) {
+            $rows = $need->getRelation('siblingCommitments')
+                ->whereNotIn('status', ['visa_refused', 'cancelled'])
+                ->pluck('amount_xaf');
+        } else {
+            $rows = Commitment::query()
+                ->where('need_request_id', $need->id)
+                ->whereNotIn('status', ['visa_refused', 'cancelled'])
+                ->when($exceptId !== null, fn ($query) => $query->where('id', '!=', $exceptId))
+                ->pluck('amount_xaf');
+        }
 
         $total = '0';
         foreach ($rows as $amount) {

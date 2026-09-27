@@ -69,6 +69,7 @@ export function Sidebar({ user, collapsed, onToggle }: Props) {
                         type="button"
                         className="flex w-full items-center gap-2 rounded-md px-2 py-2 text-left text-[13px] text-white/80 hover:bg-white/10"
                         aria-expanded={expanded}
+                        aria-label={item.label}
                         onClick={() => setOpen(expanded ? null : item.to)}
                       >
                         {Icon && <Icon size={15} aria-hidden />}
@@ -98,7 +99,7 @@ export function Sidebar({ user, collapsed, onToggle }: Props) {
                     key={item.to}
                     to={item.to}
                     end={item.end}
-                    title={collapsed ? item.label : undefined}
+                    aria-label={collapsed ? item.label : undefined}
                     className={({ isActive }) =>
                       `flex items-center gap-2 rounded-md px-2 py-2 text-[13px] ${isActive ? 'bg-ceeac-700 text-white' : 'text-white/75 hover:bg-white/10'}`
                     }

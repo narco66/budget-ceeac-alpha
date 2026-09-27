@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Currency;
 use App\Models\FiscalPeriod;
 use App\Models\FiscalYear;
+use App\Models\NomenclatureItem;
 use App\Models\NomenclatureVersion;
 use App\Models\NumberSequence;
 use App\Models\SystemParameter;
@@ -73,14 +74,38 @@ class ReferentialSeeder extends Seeder
 
     private function seedNomenclature(FiscalYear $year): void
     {
-        NomenclatureVersion::query()->updateOrCreate(
-            ['fiscal_year_id' => $year->id, 'code' => 'NOM-PREP-2026'],
+        NomenclatureVersion::query()
+            ->where('fiscal_year_id', $year->id)
+            ->where('code', 'NOM-PREP-2026')
+            ->whereDoesntHave('items')
+            ->delete();
+
+        $version = NomenclatureVersion::query()->updateOrCreate(
+            ['fiscal_year_id' => $year->id, 'code' => 'NOM-NATURE-2026'],
             [
-                'label' => 'Nomenclature préparatoire 2026',
+                'label' => 'Nomenclature budgétaire par nature économique 2026',
                 'status' => 'prepared',
-                'note' => 'Structure titre, chapitre, article, paragraphe prête. Aucun compte du Budget 2026 n’est chargé tant que le mapping n’atteint pas les totaux de contrôle.',
+                'note' => 'Annexe par nature économique. Les comptes sont classés ; ils ne portent pas les crédits de l’exercice.',
             ],
         );
+
+        $path = database_path('data/nomenclature-nature-2026.json');
+        /** @var list<array{level: string, code: string, label: string, parent: string|null}> $items */
+        $items = json_decode((string) file_get_contents($path), true, 512, JSON_THROW_ON_ERROR);
+        $ids = [];
+
+        foreach ($items as $item) {
+            $model = NomenclatureItem::query()->updateOrCreate(
+                ['nomenclature_version_id' => $version->id, 'code' => $item['code']],
+                [
+                    'parent_id' => $item['parent'] !== null ? ($ids[$item['parent']] ?? null) : null,
+                    'level' => $item['level'],
+                    'label' => $item['label'],
+                    'is_active' => true,
+                ],
+            );
+            $ids[$item['code']] = $model->id;
+        }
     }
 
     private function seedSequences(FiscalYear $year): void

@@ -95,7 +95,7 @@ export const NAV: NavSection[] = [
     category: 'Documents',
     items: [
       { to: '/app/ged', label: 'GED et documents', icon: Folder, permission: 'documents.view' },
-      { to: '/app/dossier', label: 'Dossier numérique', icon: GitBranch },
+      { to: '/app/dossier', label: 'Dossier numérique', icon: GitBranch, permission: 'need_requests.view' },
     ],
   },
   {

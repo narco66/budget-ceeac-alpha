@@ -90,6 +90,27 @@ class BudgetApiTest extends TestCase
         $this->assertSame(0, BudgetVersion::query()->where('status', 'published')->count());
     }
 
+    public function test_official_annex_file_is_accepted_and_stays_a_draft(): void
+    {
+        $this->actAsAdministrator();
+        $year = FiscalYear::query()->where('year', 2026)->firstOrFail();
+        $lines = json_decode((string) file_get_contents(database_path('data/official-budget-2026.json')), true, 512, JSON_THROW_ON_ERROR);
+
+        $batch = $this->postJson('/api/v1/budget-imports', [
+            'fiscal_year_id' => $year->id,
+            'mode' => 'official_2026',
+            'lines' => $lines,
+        ])->assertCreated()->assertJsonPath('data.status', 'accepted');
+
+        $this->postJson('/api/v1/budget-imports/'.$batch->json('data.id').'/promote')
+            ->assertCreated()
+            ->assertJsonPath('data.status', 'draft');
+
+        $this->assertSame(count($lines), BudgetLine::query()->count());
+        $this->assertSame(0, BudgetVersion::query()->where('status', 'published')->count());
+        $this->assertSame(0, BudgetVersion::query()->where('status', 'executable')->count());
+    }
+
     public function test_published_initial_is_immutable_and_a_decrease_cannot_exceed_it(): void
     {
         $this->actAsAdministrator();

@@ -1,7 +1,7 @@
 # Sécurité — BUDGET-CEEAC / GESBUDEP
 
 **Date :** 26 septembre 2026  
-**Portée :** exigences de conception. Ce document ne vaut pas audit de pénétration ni homologation.
+**Portée :** exigences de conception. Ce document ne vaut pas audit de pénétration ni homologation. Les en-têtes, le CORS et la file de notification sont en place. Le MFA et PostgreSQL ne le sont pas. Le constat est dans `FINAL_AUDIT.md`.
 
 ## 1. Principes
 

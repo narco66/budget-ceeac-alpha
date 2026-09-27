@@ -8,6 +8,7 @@ use App\Http\Controllers\Api\V1\ContractController;
 use App\Http\Controllers\Api\V1\ControlFindingController;
 use App\Http\Controllers\Api\V1\DashboardController;
 use App\Http\Controllers\Api\V1\DocumentController;
+use App\Http\Controllers\Api\V1\DossierController;
 use App\Http\Controllers\Api\V1\HealthController;
 use App\Http\Controllers\Api\V1\LiquidationController;
 use App\Http\Controllers\Api\V1\NeedRequestController;
@@ -75,6 +76,8 @@ Route::prefix('v1')->group(function (): void {
             Route::get('need-requests', [NeedRequestController::class, 'index']);
             Route::get('need-requests/{needRequest}', [NeedRequestController::class, 'show']);
             Route::get('tasks', [NeedRequestController::class, 'tasks']);
+            Route::get('dossiers', [DossierController::class, 'index']);
+            Route::get('dossiers/{reference}', [DossierController::class, 'show'])->where('reference', '[A-Za-z0-9-]+');
         });
 
         Route::middleware('permission:need_requests.manage')->group(function (): void {
@@ -157,6 +160,7 @@ Route::prefix('v1')->group(function (): void {
         Route::middleware('permission:documents.view')->group(function (): void {
             Route::get('documents', [DocumentController::class, 'index']);
         });
+        Route::get('documents/{document}/file', [DocumentController::class, 'file']);
 
         Route::middleware('permission:documents.manage')->group(function (): void {
             Route::post('documents', [DocumentController::class, 'store']);

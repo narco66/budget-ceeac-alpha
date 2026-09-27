@@ -1,9 +1,24 @@
 # Matrice de traçabilité — BUDGET-CEEAC / GESBUDEP
 
 **Date :** 26 septembre 2026  
-**Statut :** initiale (phase 0). Les colonnes API, table, service et test décrivent la cible. Elles seront mises à jour lorsque le code existera. Aucune exigence majeure du cahier v5.0 n’est écartée.
+**Statut :** la section 0 est le constat du 26 septembre 2026. Les tableaux suivants restent la cible écrite en phase 0. Le détail opératoire est dans `FINAL_AUDIT.md`.
 
 Légende de couverture : **Cible** = prévue, non encore codée. **Maquette** = écran Figma seulement.
+
+## 0. Couverture constatée
+
+| Exigence | Route réelle | Preuve | Couverture |
+| --- | --- | --- | --- |
+| Connexion, verrouillage, audit | `/api/v1/auth/*`, `/api/v1/audit-events` | `IdentityApiTest` | Fait |
+| Organigramme de travail | `/api/v1/organization-units` | seed `ORG-CEEAC-2026-06` | Fait, codes encore proposés |
+| Exercice, circuits, seuil, séquences | `/api/v1/fiscal-years`, `/api/v1/workflows`, `/api/v1/system-parameters`, `/api/v1/number-sequences` | `ReferentialApiTest` | Fait, sans comptes budgétaires |
+| Budget et import contrôlé | `/api/v1/budget-versions`, `/api/v1/budget-imports` | tests budget | Fait pour le moteur. Lignes 2026 non promues |
+| EB, ENG, LIQ, ORD, PAI | `/api/v1/need-requests`, `commitments`, `liquidations`, `payment-orders`, `payments` | tests de chaîne | Fait. Écrans locaux vides faute de ligne exécutoire |
+| PDF scellé | `/api/v1/documents/{id}/file` | tests EB à PAI | Fait pour sept types de pièces. Pas de QR |
+| Tiers, contrats, GED, notifications, observations | `/api/v1/parties`, `contracts`, `documents`, `notifications`, `findings` | `TransversalApiTest` | Fait. Seuils de marchés vides |
+| Tableau de bord | `/api/v1/dashboard` | `DashboardApiTest`, Playwright | Fait sur les écritures. Pas d’export |
+| Dossier unifié | `/api/v1/dossiers` | `DossierApiTest` | Fait sur les actes existants. Observations, S&E et contrats non rattachés |
+| GAR/RBM, clôture, trésorerie | — | — | Fermé. Voir `FINAL_AUDIT.md` |
 
 ## 1. Exigences de chaîne de dépense
 

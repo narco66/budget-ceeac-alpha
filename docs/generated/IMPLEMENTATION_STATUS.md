@@ -181,6 +181,76 @@
 | Décisions | ADR-021 |
 | Travaux restants | Phase 13 : pièces PDF. |
 
+## Phase 13 — PDF officiels
+
+| Rubrique | Contenu |
+| --- | --- |
+| Statut | DONE pour les pièces de la chaîne de dépense. États de clôture, QR et procès-verbal restent ouverts. |
+| Fonctions implémentées | Fiche EB à la validation. Bon et certificat d’engagement au visa ferme. Attestation de service fait à la certification. État de liquidation au visa. Ordre de paiement à la signature. Avis de paiement à l’exécution. Chaque fichier est produit une fois, scellé dans la GED, et téléchargeable. L’empreinte SHA-256 est celle des octets archivés. |
+| Fichiers créés | Migration `2026_09_26_190000_create_official_documents`, `OfficialPdfPublisher`, `OfficialPdfRenderer`, vue `pdf/act`. |
+| Migrations | `official_documents` |
+| Tests | `php artisan test` : 59 réussites. Les parcours EB, ENG, LIQ, ORD et PAI vérifient le type de pièce. La fiche EB téléchargée commence par `%PDF` et son empreinte correspond au fichier. |
+| Résultats | L’écran local n’affiche aucune pièce : aucun acte n’est validé. Aucun montant n’est simulé dans un PDF. |
+| Problèmes | Pas de QR. Pas de procès-verbal, faute de règle d’exigibilité. PostgreSQL absent. |
+| Décisions | ADR-022 |
+| Travaux restants | Phase 14 : tests globaux. |
+
+## Phase 14 — Tests globaux
+
+| Rubrique | Contenu |
+| --- | --- |
+| Statut | DONE pour la suite séquentielle, les tests d’interface unitaires et le parcours Playwright honnête. La concurrence parallèle reste BLOCKED sans PostgreSQL. |
+| Fonctions implémentées | Aucune règle métier nouvelle. Les refus d’email et d’identifiants, la déconnexion, et l’absence du total 40 305 795 803 XAF sur les écrans de la chaîne sont rejoués dans un navigateur. Le circuit nominal reste prouvé par PHPUnit, parce que l’exercice local n’est pas exécutoire. |
+| Fichiers créés | `frontend/e2e/parcours.spec.ts`, `frontend/playwright.config.ts`, `backend/tests/Feature/ConcurrencyGapTest.php` |
+| Migrations | Aucune. |
+| Tests | `php artisan test` : 59 réussites, 1 test ignoré, 605 assertions. `npm test` : 4 réussites. `npm run test:e2e` : 2 réussites. |
+| Résultats | Un email mal formé est refusé avant l’API. Un mot de passe inconnu reste sur l’accueil. La session locale parcourt l’accueil, le tableau exécutif, la chaîne de dépense et la GED sans afficher le total de l’annexe. La déconnexion ramène à l’accueil. |
+| Problèmes | Le test de verrou parallèle est ignoré sur SQLite. Il ne sera concluant qu’une fois rejoué sur PostgreSQL. |
+| Décisions | ADR-023 |
+| Travaux restants | Phase 15 : optimisation. |
+
+## Phase 15 — Optimisation
+
+| Rubrique | Contenu |
+| --- | --- |
+| Statut | DONE pour les index, les lectures groupées, les en-têtes, le clavier et la file de notification. Les PDF restent dans la transaction de l’acte. |
+| Fonctions implémentées | Index sur les statuts de la chaîne, le périmètre, l’exercice courant, les événements budgétaires d’un acte et les documents retirés. Les listes préchargent les pièces officielles, la dernière trace et les cumuls. Chaque réponse porte les en-têtes de sécurité et un identifiant de corrélation. Le navigateur n’accepte l’API que depuis les origines du frontend. Le premier Tab atteint un lien vers le contenu. Une tâche ouverte dépose une notification dans la file, reprise trois fois. |
+| Fichiers créés | Migration `2026_09_26_200000_add_chain_query_indexes`, `SecurityHeaders`, `DeliverTaskNotification`, `ChainListPreloader`, `WorkflowCursor`. |
+| Migrations | Index de lecture. Aucune colonne nouvelle. |
+| Tests | `php artisan test` : 59 réussites, 1 test ignoré, 615 assertions. Playwright : refus, lien d’évitement, parcours des écrans vides. |
+| Résultats | Le circuit financier n’est pas déplacé dans la file. Une notification en échec reste visible dans `failed_jobs`. |
+| Problèmes | La file locale est `database`. Sans `php artisan queue:work`, l’inbox n’est pas remplie. Le serveur PHP de ce poste ajoute encore `X-Powered-By` : `expose_php` ne se coupe pas depuis l’application. PostgreSQL reste absent. |
+| Décisions | ADR-024 |
+| Travaux restants | Phase 16 : documentation finale. |
+
+## Phase 16 — Documentation finale
+
+| Rubrique | Contenu |
+| --- | --- |
+| Statut | DONE |
+| Fonctions implémentées | Aucune règle métier nouvelle. L’audit final dit ce qui s’exécute, ce qui est prouvé, et ce qui reste fermé. Le README décrit le lancement sur SQLite local et sur PostgreSQL. Les documents de conception renvoient à cet audit sans être réécrits comme s’ils dataient d’après le code. |
+| Fichiers créés | `docs/generated/FINAL_AUDIT.md` |
+| Migrations | Aucune. |
+| Tests | Aucune suite nouvelle. Les chiffres cités sont ceux de la phase 15 : 59 réussites PHPUnit, 1 test ignoré, 615 assertions, 4 tests Vitest, 2 parcours Playwright. |
+| Résultats | Les sujets sans source institutionnelle restent nommés comme fermés. |
+| Problèmes | PostgreSQL, Budget 2026 tabulaire, MFA, seuils de marchés, QR et clôture restent ouverts. |
+| Décisions | Aucune nouvelle. ADR-012 à ADR-024 restent en vigueur. |
+| Travaux restants | Installer PostgreSQL et rejouer la concurrence. Charger le Budget 2026 seulement après un mapping contrôlé. |
+
+## Suite — Dossier financier unifié
+
+| Rubrique | Contenu |
+| --- | --- |
+| Statut | DONE pour la filiation des actes existants. |
+| Fonctions implémentées | `GET /api/v1/dossiers` et `GET /api/v1/dossiers/{reference}`. Le périmètre est celui du tableau de bord. Un contrat retrouvé indique qu’aucune dépense n’y est rattachée. Les observations et le suivi-évaluation ne sont pas inventés comme liens. |
+| Fichiers créés | `DossierService`, `DossierController`, `DossierPage`. |
+| Migrations | Aucune. |
+| Tests | `DossierApiTest` : la facture retrouve l’expression, une autre structure ne la voit pas, le contrat reste détaché. |
+| Résultats | L’écran local n’affiche un dossier que si un acte existe. |
+| Problèmes | Pas de rattachement observation, contrat ou GAR/RBM. |
+| Décisions | Aucune nouvelle. Le lien manquant est dit à l’écran. |
+| Travaux restants | PostgreSQL, Budget 2026 tabulaire, et les sujets fermés de l’audit. |
+
 ## Phases suivantes
 
 | Phase | Statut |
@@ -197,7 +267,7 @@
 | 10 PAI | DONE pour les trois modes, la preuve, le partiel et le rejet. Rapprochement et PDF reportés. |
 | 11 Modules transversaux | DONE pour les tiers, les contrats, la GED, les notifications et les observations. S&E, Gantt, trésorerie et seuils de marchés non chargés. |
 | 12 Tableaux de bord | DONE pour les indicateurs calculés et le périmètre. PDF, exports et avancement physique reportés. |
-| 13 PDF | TODO |
-| 14 Tests globaux | TODO |
-| 15 Optimisation | TODO |
-| 16 Documentation finale | TODO |
+| 13 PDF | DONE pour les pièces de la chaîne, scellées dans la GED. QR, procès-verbal et états de clôture reportés. |
+| 14 Tests globaux | DONE pour PHPUnit, Vitest et Playwright. Concurrence parallèle BLOCKED sans PostgreSQL. |
+| 15 Optimisation | DONE pour les index, les lectures groupées, les en-têtes, le clavier et la file de notification. |
+| 16 Documentation finale | DONE. `FINAL_AUDIT.md` et README opérable. Les manques institutionnels restent nommés. |

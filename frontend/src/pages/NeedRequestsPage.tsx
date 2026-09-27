@@ -72,7 +72,7 @@ export function NeedRequestsPage() {
       {requests.data && requests.data.data.length === 0 && (
         <EmptyState
           title="Aucune expression de besoin"
-          description="Aucun dossier n’est en circulation. Aucun montant n’est simulé."
+          description="Aucun dossier n’est en circulation. La fiche officielle est archivée dans la GED au moment de la validation. Aucun montant n’est simulé."
         />
       )}
       {requests.data && requests.data.data.length > 0 && (

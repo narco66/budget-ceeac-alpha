@@ -1,0 +1,1642 @@
+[
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "66101",
+  "label": "Salaire de base des fonctionnaires",
+  "amount_xaf": "5377302285"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "66102",
+  "label": "Salaire de base des Agents",
+  "amount_xaf": "619931518"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "66103",
+  "label": "Salaires autres personnels (temporaires)",
+  "amount_xaf": "352487103"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "66105",
+  "label": "Solde de tout compte",
+  "amount_xaf": "150000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "6631",
+  "label": "Primes",
+  "amount_xaf": "46700000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "66321",
+  "label": "Allocations familliale",
+  "amount_xaf": "150000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "66322",
+  "label": "Allocations enfant handicapé",
+  "amount_xaf": "1200000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "66323",
+  "label": "Allocations prénatale",
+  "amount_xaf": "1950000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "66324",
+  "label": "Allocations pour conjoints à charge",
+  "amount_xaf": "220000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "66325",
+  "label": "Allocation pour frais de scolarité",
+  "amount_xaf": "177660000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "66331",
+  "label": "Indemnités de fonction",
+  "amount_xaf": "429059136"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "66332",
+  "label": "Indemnités de sujetion",
+  "amount_xaf": "204493254"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "66333",
+  "label": "Indemnité de représentation",
+  "amount_xaf": "70201440"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "66334",
+  "label": "Indemnités de logement",
+  "amount_xaf": "875100000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "66335",
+  "label": "Indemnités de transport",
+  "amount_xaf": "376882459"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "66336",
+  "label": "Indemnités intérim",
+  "amount_xaf": "54559296"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "66337",
+  "label": "indemnités d'ajustement de poste",
+  "amount_xaf": "5765376"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "66338",
+  "label": "Indemnité d’éloignement",
+  "amount_xaf": "200000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "66339",
+  "label": "indemnité d'équipement et installation",
+  "amount_xaf": "700000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "66411",
+  "label": "Provision retraite fonctionnaire 15% (5% employés et 10% employeur)",
+  "amount_xaf": "793496808"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "66421",
+  "label": "Prévoyance CNSS",
+  "amount_xaf": "101176128"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "66511",
+  "label": "Avantage en nature",
+  "amount_xaf": "333300000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "66611",
+  "label": "Assurances",
+  "amount_xaf": "320000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "66612",
+  "label": "Frais d'obsèques et d'inhumation",
+  "amount_xaf": "25000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "6711",
+  "label": "MICOPAX-RCA (arriérés)",
+  "amount_xaf": "5000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "6712",
+  "label": "Frais bancaires",
+  "amount_xaf": "5000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "60111",
+  "label": "Fourniture de bureau",
+  "amount_xaf": "50000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "60112",
+  "label": "Consommables informatiques",
+  "amount_xaf": "50000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "60113",
+  "label": "Carburant et lubrifiant",
+  "amount_xaf": "20000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "60511",
+  "label": "Eau et Electricité",
+  "amount_xaf": "80000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "61111",
+  "label": "Voyages et déplacements",
+  "amount_xaf": "250000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "61112",
+  "label": "Frais de transports déménagement",
+  "amount_xaf": "150000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "61113",
+  "label": "Frais de transports congés",
+  "amount_xaf": "200000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "61114",
+  "label": "Frais de location voitures",
+  "amount_xaf": "20000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "61121",
+  "label": "Frais de mission",
+  "amount_xaf": "450000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "61221",
+  "label": "Frais de gardiennage",
+  "amount_xaf": "98000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "61311",
+  "label": "Commissaires aux comptes",
+  "amount_xaf": "20000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "61312",
+  "label": "Honoraires et Etudes et prestations de services",
+  "amount_xaf": "50000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "61313",
+  "label": "Frais d'actes et de contentieux",
+  "amount_xaf": "4000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "61314",
+  "label": "Frais de recrutement",
+  "amount_xaf": "55000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "61321",
+  "label": "Commissions budgétaires",
+  "amount_xaf": "50000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "61322",
+  "label": "Comité de trésorérie",
+  "amount_xaf": "30000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "61411",
+  "label": "Frais entretien immeubles siège",
+  "amount_xaf": "100000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "61421",
+  "label": "Frais entretien matériel",
+  "amount_xaf": "6500000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "61422",
+  "label": "Frais entretien véhicules",
+  "amount_xaf": "10000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "61424",
+  "label": "Contrats entretien services annexes",
+  "amount_xaf": "30000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "61431",
+  "label": "Maintenance informatique",
+  "amount_xaf": "5000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "61432",
+  "label": "Réparation véhicules",
+  "amount_xaf": "2500000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "61511",
+  "label": "Assurance véhicules",
+  "amount_xaf": "1000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "61512",
+  "label": "Assurance bâtiments",
+  "amount_xaf": "5000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "61711",
+  "label": "Frais de réception et de représentation",
+  "amount_xaf": "10000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "61712",
+  "label": "Annonces, insertions et publications",
+  "amount_xaf": "2000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "61713",
+  "label": "Catalogues, imprimés publicitaires et traductions",
+  "amount_xaf": "750000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "61714",
+  "label": "Frais de séminaires et ateliers",
+  "amount_xaf": "5000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "61715",
+  "label": "Fêtes et cérémonies",
+  "amount_xaf": "5000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "61811",
+  "label": "Frais de téléphone",
+  "amount_xaf": "1000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "61812",
+  "label": "Frais de connexion internet et site web",
+  "amount_xaf": "60000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "61813",
+  "label": "Frais de Poste et télécommunication",
+  "amount_xaf": "500000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "61814",
+  "label": "Frais de courrier express",
+  "amount_xaf": "25000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "61815",
+  "label": "Frais édition et publication JO et Communication de Presse",
+  "amount_xaf": "25000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "64411",
+  "label": "Bureau liaison RCA",
+  "amount_xaf": "30000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "64412",
+  "label": "Bureau liason RDC",
+  "amount_xaf": "30000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "64413",
+  "label": "Bureau liaison auprès de l'UA",
+  "amount_xaf": "30000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "64414",
+  "label": "Bureau liaison BURUNDI / CIRGL",
+  "amount_xaf": "30000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "64415",
+  "label": "Bureau liaison CONGO",
+  "amount_xaf": "30000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "64416",
+  "label": "Bureau liaison TCHAD",
+  "amount_xaf": "30000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "fonctionnement",
+  "funding_source": "ceeac",
+  "code": "64417",
+  "label": "Bureau liaison GUINEE EQUATORIALE",
+  "amount_xaf": "30000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "631",
+  "label": "SUBVENTIONS VERSEES",
+  "amount_xaf": "1847000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "63911",
+  "label": "COPILCER-AC",
+  "amount_xaf": "150000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "20911",
+  "label": "Conférence des Chefs d'Etats et de Gouvernement",
+  "amount_xaf": "400000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "20912",
+  "label": "Conseil des Ministres",
+  "amount_xaf": "200000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "20913",
+  "label": "Comité des Représentants Permanents (COREP)",
+  "amount_xaf": "25000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "20914",
+  "label": "Comités Inter Etats",
+  "amount_xaf": "50000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "20915",
+  "label": "Comité Technique Spécialisé",
+  "amount_xaf": "150000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "20921",
+  "label": "Autres programmes CEEAC",
+  "amount_xaf": "200000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "20931",
+  "label": "Mission circulaire de haut niveau sur le financement durable de la CEEAC",
+  "amount_xaf": "300000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "20932",
+  "label": "Missions et autres activités de médiation pour la gestion des crises sécuritaires",
+  "amount_xaf": "200000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "equipement",
+  "funding_source": "ceeac",
+  "code": "21321",
+  "label": "Renouvellement équipement informatique et licences",
+  "amount_xaf": "100000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "equipement",
+  "funding_source": "ceeac",
+  "code": "21323",
+  "label": "l'infrastructure système et réseau de la",
+  "amount_xaf": "100000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "equipement",
+  "funding_source": "ceeac",
+  "code": "21324",
+  "label": "Acquisition ERP",
+  "amount_xaf": "100000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "equipement",
+  "funding_source": "ceeac",
+  "code": "21331",
+  "label": "Maaintenance Evolutive du Site web",
+  "amount_xaf": "10000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "equipement",
+  "funding_source": "ceeac",
+  "code": "21332",
+  "label": "Solution intranet",
+  "amount_xaf": "5000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "equipement",
+  "funding_source": "ceeac",
+  "code": "21333",
+  "label": "Système gestion documentaire et archivage electronique",
+  "amount_xaf": "50000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "equipement",
+  "funding_source": "ceeac",
+  "code": "21334",
+  "label": "Mise en place du ou des outils de type ESB (Entreprise Service Bus)",
+  "amount_xaf": "10000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "equipement",
+  "funding_source": "ceeac",
+  "code": "21335",
+  "label": "Mise en place CEEAC Web TV",
+  "amount_xaf": "1000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "equipement",
+  "funding_source": "ceeac",
+  "code": "21336",
+  "label": "Acquisition des équipements de production audio visuelle",
+  "amount_xaf": "5000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "equipement",
+  "funding_source": "ceeac",
+  "code": "21337",
+  "label": "Acquisition d'unité de production et impression numérique",
+  "amount_xaf": "10000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "equipement",
+  "funding_source": "ceeac",
+  "code": "23",
+  "label": "Autres dépenses à caractères d'immobilisation",
+  "amount_xaf": "20000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "equipement",
+  "funding_source": "ceeac",
+  "code": "24111",
+  "label": "Tables bureaux avec tiroirs",
+  "amount_xaf": "50000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "equipement",
+  "funding_source": "ceeac",
+  "code": "24112",
+  "label": "Achat chaises & Fauteuils bâtiment du Siège",
+  "amount_xaf": "25000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "equipement",
+  "funding_source": "ceeac",
+  "code": "24113",
+  "label": "Achat Chaises & fauteuils Bâtiments annexes",
+  "amount_xaf": "15000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "equipement",
+  "funding_source": "ceeac",
+  "code": "24114",
+  "label": "Armoires de rangement bâtiment du siège",
+  "amount_xaf": "10000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "equipement",
+  "funding_source": "ceeac",
+  "code": "24115",
+  "label": "Armoires de rangement bâtiments annexes",
+  "amount_xaf": "5000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "equipement",
+  "funding_source": "ceeac",
+  "code": "24121",
+  "label": "Petit matériel de bureau",
+  "amount_xaf": "5000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "equipement",
+  "funding_source": "ceeac",
+  "code": "24211",
+  "label": "Kit d'acces et videosurveillance",
+  "amount_xaf": "1000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "equipement",
+  "funding_source": "ceeac",
+  "code": "24213",
+  "label": "Petits équipements informatiques",
+  "amount_xaf": "10000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "equipement",
+  "funding_source": "ceeac",
+  "code": "24214",
+  "label": "Multiprises et câblages informatiques",
+  "amount_xaf": "5000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "equipement",
+  "funding_source": "ceeac",
+  "code": "24215",
+  "label": "Petits matériels informatiques",
+  "amount_xaf": "4000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "equipement",
+  "funding_source": "ceeac",
+  "code": "24311",
+  "label": "Matériel de transport",
+  "amount_xaf": "200000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "20111",
+  "label": "Fonctionnement du Comité des Sages",
+  "amount_xaf": "150000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "201121",
+  "label": "sur la médiation",
+  "amount_xaf": "135000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "201122",
+  "label": "Mise en place de la plateforme organique de médiation",
+  "amount_xaf": "120000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "201131",
+  "label": "gouvernance et la lutte contre la corruption",
+  "amount_xaf": "50000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "201143",
+  "label": "missions d'observation électorales dans les Etats membres ; (ii)",
+  "amount_xaf": "200000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "2012",
+  "label": "AXE : CENTRALE",
+  "amount_xaf": "885000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "2013",
+  "label": "PREVENIR LES CONFLITS ET CRISES EN AFRIQUE CENTRALE AXE 3:",
+  "amount_xaf": "210000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "20211",
+  "label": "Opérationnalisation de la zone de libre-échange et de l’union douanière 255 000 255 000",
+  "amount_xaf": "255000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "202121",
+  "label": "Opérationnalisation du mécanisme d’élimination des BNT",
+  "amount_xaf": "60000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "202122",
+  "label": "Facilitation du commerce transfrontalier des marchandises",
+  "amount_xaf": "140000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "202131-CEEAC",
+  "label": "Libéralisation du commerce des services au niveau de la CEEAC",
+  "amount_xaf": "50000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ptf",
+  "code": "202131-PTF",
+  "label": "Libéralisation du commerce des services au niveau de la CEEAC",
+  "amount_xaf": "230000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "202132-CEEAC",
+  "label": "Opérationalisation de la Politique régionale du commerce numérique en Afrique centrale",
+  "amount_xaf": "20000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ptf",
+  "code": "202132-PTF",
+  "label": "Opérationalisation de la Politique régionale du commerce numérique en Afrique centrale",
+  "amount_xaf": "35000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "20214",
+  "label": "Insertion harmonieuse des Etats membres de la CEEAC dans le commerce continental et mondial",
+  "amount_xaf": "50000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "202151",
+  "label": "Opérationnalisation du cadre légal et règlementaire sur la libre-circulation des personnes et le droit d'établissement en Afrique Centrale",
+  "amount_xaf": "50000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "2022",
+  "label": "AXE L'ENVIRONNEMENT DES AFFAIRES",
+  "amount_xaf": "275000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ptf",
+  "code": "202311",
+  "label": "Appui à la transformation structurelle des économies de la CEEAC autour des chaines de valeur prioritaires",
+  "amount_xaf": "200000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ptf",
+  "code": "202312",
+  "label": "Promotion d'initiatives collaboratives, de réseaux et de clusters au sein des CVP",
+  "amount_xaf": "100000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ptf",
+  "code": "202321",
+  "label": "Appui à la modernisation et au développement technologique des entreprises dans les CVP",
+  "amount_xaf": "200000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "202322-CEEAC",
+  "label": "Opérationnalisation du Centre régional de développement industriel et technologique",
+  "amount_xaf": "75000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ptf",
+  "code": "202322-PTF",
+  "label": "Opérationnalisation du Centre régional de développement industriel et technologique",
+  "amount_xaf": "30000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "202331-CEEAC",
+  "label": "l'infrastructure qualité, des politiques et des normes",
+  "amount_xaf": "65000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ptf",
+  "code": "202331-PTF",
+  "label": "l'infrastructure qualité, des politiques et des normes",
+  "amount_xaf": "350000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "202332-CEEAC",
+  "label": "Harmonisation et intégration régionales dans les fonctions liées aux mesures SPS et aux normes",
+  "amount_xaf": "10000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ptf",
+  "code": "202332-PTF",
+  "label": "Harmonisation et intégration régionales dans les fonctions liées aux mesures SPS et aux normes",
+  "amount_xaf": "50000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "20234",
+  "label": "Promotion de la propriété intellectuelle",
+  "amount_xaf": "50000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "202351-CEEAC",
+  "label": "Renforcement des cadres de dialogue public-privé sur le processus d'intégration régionale",
+  "amount_xaf": "60000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ptf",
+  "code": "202351-PTF",
+  "label": "Renforcement des cadres de dialogue public-privé sur le processus d'intégration régionale",
+  "amount_xaf": "50000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "202352",
+  "label": "(FECIAC, SAIEF label Made in central Africa)",
+  "amount_xaf": "250000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "202411",
+  "label": "CEEAC, incluant les INS, banques centrales, observatoires sectoriels et",
+  "amount_xaf": "65000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "202412-CEEAC",
+  "label": "Actualisation de la stratégie regionale de developpement de la statistique",
+  "amount_xaf": "30000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ptf",
+  "code": "202412-PTF",
+  "label": "Actualisation de la stratégie regionale de developpement de la statistique",
+  "amount_xaf": "60000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ptf",
+  "code": "202414",
+  "label": "Suivi du projet régional des statitiques de migration avec statistic sweden",
+  "amount_xaf": "40000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "202422",
+  "label": "financières, en collaboration avec les banques centrales et institutions",
+  "amount_xaf": "20000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "202423",
+  "label": "incluant des données sur les marchés, la convergence macroéconomique",
+  "amount_xaf": "50000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "202431",
+  "label": "avec visualisation dynamique, tableaux de bord, métadonnées et",
+  "amount_xaf": "25000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "202432",
+  "label": "économiques trimestriels et annuels, et les notes de conjoncture",
+  "amount_xaf": "15000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "202442",
+  "label": "Collecte et harmonisation des données nécessaires au suivi de l’intégration régionale,",
+  "amount_xaf": "30000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "202443",
+  "label": "dans la CEEAC, incluant analyse comparative, progrès par pays et",
+  "amount_xaf": "10000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "202444",
+  "label": "CEMAC et les organisations spécialisées pour garantir la cohérence des",
+  "amount_xaf": "75000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "202445",
+  "label": "régionale, intégré au Système d’Information Statistique de la",
+  "amount_xaf": "20000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "203111",
+  "label": "territoire communautaire (PATC)",
+  "amount_xaf": "50000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "203121-CEEAC",
+  "label": "ferroviaire et fluvial)",
+  "amount_xaf": "105000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ptf",
+  "code": "203121-PTF",
+  "label": "ferroviaire et fluvial)",
+  "amount_xaf": "4031332000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "203122",
+  "label": "Elaboration et révision du disppositif institutionnel",
+  "amount_xaf": "100000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "203131-CEEAC",
+  "label": "Amélioration de la connectivité des voies aériennes",
+  "amount_xaf": "15000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ptf",
+  "code": "203131-PTF",
+  "label": "Amélioration de la connectivité des voies aériennes",
+  "amount_xaf": "2607204000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "203132",
+  "label": "Renforcement de la connectivité des voies maritimes",
+  "amount_xaf": "20000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ptf",
+  "code": "203211",
+  "label": "secteur de l'Energie et particulièrement les energies renouvelables,",
+  "amount_xaf": "760150000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ptf",
+  "code": "203212",
+  "label": "coopération énergétique et la régulation de l'électricité en Afrique",
+  "amount_xaf": "485375000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "203213-CEEAC",
+  "label": "Renforcement de la Gouvernance et des capacités institutionnelles des institutions spécialisées avec un système d’information énergétique",
+  "amount_xaf": "220000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ptf",
+  "code": "203213-PTF",
+  "label": "Renforcement de la Gouvernance et des capacités institutionnelles des institutions spécialisées avec un système d’information énergétique",
+  "amount_xaf": "1397000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "203221",
+  "label": "Développement des infrastructures énergétiques en promouvant les énergies renouvelables",
+  "amount_xaf": "10000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "203222",
+  "label": "systématiquement des mesures environnementales et le changement",
+  "amount_xaf": "25000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "203232",
+  "label": "projets énergétiques et synchronisation des actions entre les acteurs",
+  "amount_xaf": "245000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "2033-CEEAC",
+  "label": "ACCELERER L'INTEGRATION REGIONALE NUMERIQUE AXE 3:",
+  "amount_xaf": "210000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ptf",
+  "code": "2033-PTF",
+  "label": "ACCELERER L'INTEGRATION REGIONALE NUMERIQUE AXE 3:",
+  "amount_xaf": "891000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "20411-CEEAC",
+  "label": "du développement rural et de la sécurité alimentaire et nutritionnelle",
+  "amount_xaf": "295000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ptf",
+  "code": "20411-PTF",
+  "label": "du développement rural et de la sécurité alimentaire et nutritionnelle",
+  "amount_xaf": "480000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "204121-CEEAC",
+  "label": "Opérationnalisation du DERNADR et ses Instances de décisions",
+  "amount_xaf": "20000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ptf",
+  "code": "204121-PTF",
+  "label": "Opérationnalisation du DERNADR et ses Instances de décisions",
+  "amount_xaf": "15000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "204122-CEEAC",
+  "label": "Opérationnalisation du dispositif de Suivi-Evaluation du DERNADR",
+  "amount_xaf": "25000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ptf",
+  "code": "204122-PTF",
+  "label": "Opérationnalisation du dispositif de Suivi-Evaluation du DERNADR",
+  "amount_xaf": "20020000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "204211-CEEAC",
+  "label": "Elaboration et adoption de la PEC",
+  "amount_xaf": "90000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ptf",
+  "code": "204211-PTF",
+  "label": "Elaboration et adoption de la PEC",
+  "amount_xaf": "50000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ptf",
+  "code": "204212",
+  "label": "Le PFR est élaborée, validée et adoptée",
+  "amount_xaf": "90000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "204213-CEEAC",
+  "label": "Elaboration et adoption de la Stratégie Régionale de Gestion des Risques de Catastrophes et adaptation au Changement Climatique (SRGRC-ACC)",
+  "amount_xaf": "20000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ptf",
+  "code": "204213-PTF",
+  "label": "Elaboration et adoption de la Stratégie Régionale de Gestion des Risques de Catastrophes et adaptation au Changement Climatique (SRGRC-ACC)",
+  "amount_xaf": "55000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "204214-CEEAC",
+  "label": "Harmonisation des politiques et stratégies nationales des Etats membres avec la PEC et la PFR",
+  "amount_xaf": "50000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ptf",
+  "code": "204214-PTF",
+  "label": "Harmonisation des politiques et stratégies nationales des Etats membres avec la PEC et la PFR",
+  "amount_xaf": "55000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ptf",
+  "code": "204215",
+  "label": "Renforcement des capacités de préparation et de réponse aux urgences (EP&R) de la CEEAC et de ses États membres",
+  "amount_xaf": "240000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "204216",
+  "label": "Elaboration et adoption de la PRE revisee",
+  "amount_xaf": "25000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "204222",
+  "label": "Elaboration de la feuille de route pour le PARGIRE et intégration du GIREE dans les politiques, stratégies et programmes",
+  "amount_xaf": "50000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "204223",
+  "label": "Renforceent du cadre institutionnel de coordination pour la gestion des ressources en eaux",
+  "amount_xaf": "35000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "204231-CEEAC",
+  "label": "La résilience des exploitations agricoles et des écosystèmes est ameliorée",
+  "amount_xaf": "10000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ptf",
+  "code": "204231-PTF",
+  "label": "La résilience des exploitations agricoles et des écosystèmes est ameliorée",
+  "amount_xaf": "115000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ptf",
+  "code": "204232",
+  "label": "Réduction de 50% des pertes post-récolte et des émissions agrosylvopastorales et halieutiques",
+  "amount_xaf": "115000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "204233",
+  "label": "Déploiement d’un cadre régional AIC opérationnel et fonctionnel dans 11 États membres",
+  "amount_xaf": "150000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "204241-CEEAC",
+  "label": "Elaboration d'un cadre régional harmonisé pour la mise en œuvre et le suivi de leurs politiques climatiques dans les EM ;",
+  "amount_xaf": "10000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ptf",
+  "code": "204241-PTF",
+  "label": "Elaboration d'un cadre régional harmonisé pour la mise en œuvre et le suivi de leurs politiques climatiques dans les EM ;",
+  "amount_xaf": "477100000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "204242-CEEAC",
+  "label": "financement innovant pour la mise en œuvre et le suivi de leurs politiques",
+  "amount_xaf": "20000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ptf",
+  "code": "204242-PTF",
+  "label": "financement innovant pour la mise en œuvre et le suivi de leurs politiques",
+  "amount_xaf": "195000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "204251",
+  "label": "environnementaux, climatologiques et météorologiques et diffusion",
+  "amount_xaf": "100000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "204252",
+  "label": "Digitalisation du Potentiel Solaire et Eolien dans les Etats Membres de la CEEAC",
+  "amount_xaf": "50000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "204253",
+  "label": "Digitalisation la dynamique de la désertification et la dégradation de la biodiversité et de sols dans l'espace CEEAC",
+  "amount_xaf": "50000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "205-CEEAC",
+  "label": "PROMOTION DU GENRE, INTEGRATION HUMAINE ET SOCIALE PILIER",
+  "amount_xaf": "1350000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ptf",
+  "code": "205-PTF",
+  "label": "PROMOTION DU GENRE, INTEGRATION HUMAINE ET SOCIALE PILIER",
+  "amount_xaf": "606100000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "206111",
+  "label": "Elaboration et adoption des textes et outils d'application des textes fondamentaux",
+  "amount_xaf": "10000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "206112",
+  "label": "Révision des Textes d'application conformément aux Textes fondamentaux",
+  "amount_xaf": "40000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "206113",
+  "label": "comptables et financières",
+  "amount_xaf": "15000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "206114",
+  "label": "Finalisation du processus juridique de création de certaines structures et mécanismes existants",
+  "amount_xaf": "70000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "206211",
+  "label": "Adoption et Mise en œuvre de la Politique de Gestion des Ressources Humaines",
+  "amount_xaf": "75000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "206212",
+  "label": "Amélioration de la Gestion du Personnel",
+  "amount_xaf": "10000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "206221",
+  "label": "Mise en œuvre et suivi du mécanisme de la CCI dans les États membres",
+  "amount_xaf": "115000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "206222",
+  "label": "Amélioration de la gestion comptable des ressources",
+  "amount_xaf": "105000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "206231",
+  "label": "Amélioration des mécanismes de gestion du patrimoine immobilier et mobilier",
+  "amount_xaf": "40000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "206234",
+  "label": "Réduction des incidents et amélioration des supports et la qualité de service",
+  "amount_xaf": "12000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "206235",
+  "label": "structuré",
+  "amount_xaf": "5000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "2063",
+  "label": "AXE 3:",
+  "amount_xaf": "792000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "206411",
+  "label": "Mise en place des politiques et mécanismes de coopération et de coordination",
+  "amount_xaf": "20000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "206412",
+  "label": "Accélération du processus de rationalisation des CERs opérant dans le domaine de l’intégration régionale en Afrique Centrale",
+  "amount_xaf": "11000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "206413",
+  "label": "Mise en place et renforcement des mécanismes de mobilisation des ressources extraordinaires",
+  "amount_xaf": "50000000"
+ },
+ {
+  "nature": "expenditure",
+  "segment": "investissement",
+  "funding_source": "ceeac",
+  "code": "206414",
+  "label": "Mise en place et opérationnalisation des institutions et des mécanismes communautaires",
+  "amount_xaf": "115000000"
+ },
+ {
+  "nature": "revenue",
+  "segment": "recette",
+  "funding_source": "ceeac",
+  "code": "7210",
+  "label": "Contributions de l'exercice",
+  "amount_xaf": "26275514803"
+ },
+ {
+  "nature": "revenue",
+  "segment": "recette",
+  "funding_source": "ptf",
+  "code": "741",
+  "label": "Recettes externes",
+  "amount_xaf": "14030281000"
+ }
+]

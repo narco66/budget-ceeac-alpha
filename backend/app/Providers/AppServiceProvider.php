@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Domain\Notifications\NotifyOpenTask;
+use App\Jobs\DeliverTaskNotification;
 use App\Models\Task;
 use Illuminate\Support\ServiceProvider;
 
@@ -22,7 +22,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Task::created(function (Task $task): void {
-            app(NotifyOpenTask::class)->created($task);
+            DeliverTaskNotification::dispatch($task->id);
         });
     }
 }

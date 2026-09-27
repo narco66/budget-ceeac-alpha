@@ -43,7 +43,7 @@ export function PaymentsPage() {
       {query.data && query.data.data.length === 0 && (
         <EmptyState
           title="Aucun paiement"
-          description="Aucun ordonnancement pris en charge n’a ouvert de décaissement. Les modes, preuves et rejets apparaîtront ici. Aucun montant n’est simulé."
+          description="Aucun ordonnancement pris en charge n’a ouvert de décaissement. L’avis de paiement est archivé à l’exécution. Aucun montant n’est simulé."
         />
       )}
       {query.data && query.data.data.length > 0 && (

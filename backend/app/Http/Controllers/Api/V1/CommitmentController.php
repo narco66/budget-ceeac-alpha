@@ -2,17 +2,23 @@
 
 namespace App\Http\Controllers\Api\V1;
 
+use App\Domain\Expenditure\ChainListPreloader;
 use App\Domain\Expenditure\EngagementService;
 use App\Http\Controllers\Controller;
 use App\Models\Commitment;
 use App\Models\NeedRequest;
 use App\Support\ApiResponse;
+use App\Support\OfficialDocumentPayload;
+use App\Support\WorkflowCursor;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class CommitmentController extends Controller
 {
-    public function __construct(private readonly EngagementService $engagements) {}
+    public function __construct(
+        private readonly EngagementService $engagements,
+        private readonly ChainListPreloader $lists,
+    ) {}
 
     public function index(): JsonResponse
     {
@@ -20,6 +26,7 @@ class CommitmentController extends Controller
             ->with(['needRequest', 'workflow.currentStep', 'liquidations'])
             ->orderByDesc('created_at')
             ->get();
+        $this->lists->commitments($commitments);
 
         return ApiResponse::success(
             $commitments->map(fn (Commitment $commitment): array => $this->payload($commitment))->values(),
@@ -98,7 +105,7 @@ class CommitmentController extends Controller
     {
         $figures = $this->engagements->figures($commitment);
         $step = $commitment->workflow?->currentStep;
-        $last = $commitment->workflow?->events()->latest('created_at')->first();
+        $last = WorkflowCursor::last($commitment->workflow);
 
         return [
             'id' => $commitment->id,
@@ -110,7 +117,7 @@ class CommitmentController extends Controller
             'reserved_xaf' => $figures['reserved_xaf'],
             'committed_xaf' => $figures['committed_xaf'],
             'eb_remainder_xaf' => $figures['eb_remainder_xaf'],
-            'official_pdf' => null,
+            'official_documents' => OfficialDocumentPayload::for($commitment),
             'need_request' => $commitment->relationLoaded('needRequest') && $commitment->needRequest !== null ? [
                 'id' => $commitment->needRequest->id,
                 'reference' => $commitment->needRequest->reference,

@@ -1,7 +1,7 @@
 # Architecture — BUDGET-CEEAC / GESBUDEP
 
 **Date :** 26 septembre 2026  
-**Statut :** cible de réalisation (phase 1)
+**Statut :** cible de la phase 1. Le constat du 26 septembre 2026 est dans `FINAL_AUDIT.md`. Les notifications passent par la file. Les PDF officiels restent dans la transaction de l’acte (ADR-024), ils ne sont pas différés.
 
 ## 1. Vue d’ensemble
 

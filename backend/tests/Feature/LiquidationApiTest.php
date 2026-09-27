@@ -44,7 +44,7 @@ class LiquidationApiTest extends TestCase
             ->assertJsonPath('data.withholding_xaf', '1000')
             ->assertJsonPath('data.remainder_xaf', '5000')
             ->assertJsonPath('data.commitment.object', 'Besoin liquidable')
-            ->assertJsonPath('data.official_pdf', null);
+            ->assertJsonPath('data.official_documents', []);
 
         $this->postJson('/api/v1/liquidations/'.$first->id.'/statement', $this->statement('1000', '2000', 'FAC-1'))
             ->assertStatus(422)
@@ -115,7 +115,8 @@ class LiquidationApiTest extends TestCase
             ->assertJsonPath('data.status', 'vised')
             ->assertJsonPath('data.liquidated_xaf', '7000')
             ->assertJsonPath('data.payment_orders.0.status', 'to_sign_sg')
-            ->assertJsonPath('data.official_pdf', null);
+            ->assertJsonPath('data.official_documents.0.kind', 'liq_attestation')
+            ->assertJsonPath('data.official_documents.1.kind', 'liq_etat');
         $this->assertStringStartsWith('ORD-2026-', (string) $vised->json('data.payment_orders.0.reference'));
         $this->postJson('/api/v1/liquidations/'.$liquidationId.'/transitions', ['action' => 'visa'])->assertStatus(422);
         $this->assertSame(1, PaymentOrder::query()->count());

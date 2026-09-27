@@ -230,3 +230,36 @@
 | Décision | Les indicateurs sont la somme des écritures du périmètre. Les fonctions transversales voient la Commission. Les autres voient leur structure et les unités qui en dépendent, ou rien si aucune structure n’est affectée. Le taux d’exécution est le quotient entier du payé sur le révisé. Il est absent lorsque le révisé est nul. Une alerte de crédit n’est émise que si une ligne exécutoire a un disponible nul. Aucun seuil de proximité n’est inventé. L’avancement physique reste absent. |
 | Motif | Cahier §20.2. Les totaux de l’annexe 2026 sont une barrière d’import, pas des crédits ouverts. |
 | Impact | L’écran local annonce l’absence de crédit exécutoire. Un brouillon budgétaire n’entre pas dans le total. |
+
+## ADR-022 — PDF officiel scellé à l’événement
+
+| Élément | Valeur |
+| --- | --- |
+| Date | 2026-09-26 |
+| Question | Quand produire les pièces officielles, et que faire du QR et du procès-verbal ? |
+| Options | Régénérer le PDF à chaque consultation ; produire un brouillon avant validation ; figer le fichier au moment de l’acte |
+| Décision | La fiche EB naît à la validation. Le bon et le certificat d’engagement naissent au visa qui rend l’engagement ferme. L’attestation de service fait naît à la certification, l’état de liquidation au visa. L’ordre de paiement naît à la signature. L’avis de paiement naît à l’exécution. Un même acte et un même type de pièce ne produisent qu’un fichier. Il est scellé dans la GED. L’empreinte SHA-256 est celle des octets archivés. L’identifiant de vérification est imprimé ; le QR n’est pas activé. Le procès-verbal de réception n’est pas généré : aucune règle ne dit quand il est exigé. Les états de clôture ne sont pas produits. |
+| Motif | Cahier §§8.9 et 26. Un PDF régénéré changerait l’empreinte d’un acte déjà signé. |
+| Impact | Les écrans locaux restent vides tant qu’aucun acte n’est validé. Le téléchargement renvoie le fichier scellé. |
+
+## ADR-023 — Périmètre des tests globaux
+
+| Élément | Valeur |
+| --- | --- |
+| Date | 2026-09-26 |
+| Question | Que prouver en phase 14 alors que l’exercice local n’est pas exécutoire et que PostgreSQL n’est pas installé ? |
+| Options | Semer un budget fictif pour un parcours navigateur complet ; déclarer la concurrence SQLite concluante ; limiter le navigateur aux refus et aux écrans vides, et garder le circuit nominal dans PHPUnit |
+| Décision | PHPUnit prouve le circuit EB → PAI et les PDF. Vitest prouve le format monétaire, les états et le schéma de connexion. Playwright prouve le refus d’un email invalide, le refus d’identifiants inconnus, la déconnexion, et l’absence du total de l’annexe 2026 sur les écrans vides. Les identifiants locaux viennent du fichier d’environnement et ne sont pas versionnés. Le test de verrou parallèle est ignoré tant que le pilote n’est pas PostgreSQL. |
+| Motif | Cahier §§14 à 21 et ADR-012. Un budget semé pour le navigateur copierait des crédits qui ne sont pas ouverts. Un succès SQLite sur `lockForUpdate` ne prouve pas la concurrence. |
+| Impact | `npm run test:e2e` exige l’API et Vite déjà lancés. La phase 15 ne commence pas par un rejeu PostgreSQL. |
+
+## ADR-024 — File pour les notifications, pas pour le crédit
+
+| Élément | Valeur |
+| --- | --- |
+| Date | 2026-09-26 |
+| Question | Que déplacer dans la file sans retarder un acte financier ? |
+| Options | Tout laisser synchrone ; mettre les PDF et les notifications en file ; ne mettre en file que la notification |
+| Décision | Une tâche ouverte dépose `DeliverTaskNotification`. La livraison est idempotente, reprise trois fois, et visible dans `failed_jobs` si elle échoue. Les écritures de crédit et les PDF officiels restent dans la transaction de l’acte. Les listes préchargent pièces, traces et cumuls. Les réponses exposent les en-têtes prévus et `X-Request-Id`. Le CORS est limité aux origines du frontend. |
+| Motif | Cahier §§60 et 61, architecture §3. Un PDF produit après la réponse pourrait manquer sur un acte déjà signé. Un disponible calculé par un job ne peut pas autoriser une dépense. |
+| Impact | `php artisan queue:work` est requis pour remplir l’inbox lorsque `QUEUE_CONNECTION=database`. Les tests restent sur la file synchrone. |

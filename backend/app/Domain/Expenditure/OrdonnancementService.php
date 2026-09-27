@@ -2,6 +2,7 @@
 
 namespace App\Domain\Expenditure;
 
+use App\Domain\Documents\OfficialPdfPublisher;
 use App\Domain\Identity\SegregationOfDuties;
 use App\Domain\Money\IntegerAmount;
 use App\Domain\Referentials\AuthorizerResolver;
@@ -29,6 +30,7 @@ class OrdonnancementService
         private readonly NumberSequenceAllocator $allocator,
         private readonly OrdonnancementWorkflow $workflow,
         private readonly PaymentWorkflow $paymentWorkflow,
+        private readonly OfficialPdfPublisher $pdfs,
     ) {}
 
     public function present(PaymentOrder $order): PaymentOrder
@@ -180,7 +182,7 @@ class OrdonnancementService
             }
 
             if ($target->code === 'transmission') {
-                return $this->transmit($locked, $instance, $target);
+                return $this->transmit($locked, $instance, $target, $user);
             }
 
             $instance->update([
@@ -207,7 +209,7 @@ class OrdonnancementService
         ];
     }
 
-    private function transmit(PaymentOrder $order, WorkflowInstance $instance, WorkflowStep $transmission): PaymentOrder
+    private function transmit(PaymentOrder $order, WorkflowInstance $instance, WorkflowStep $transmission, User $user): PaymentOrder
     {
         $takeover = WorkflowStep::query()
             ->where('workflow_definition_id', $instance->workflow_definition_id)
@@ -230,6 +232,7 @@ class OrdonnancementService
         $order->update(['status' => 'transmitted']);
         $this->openPayment($order);
         $this->openTask($order->refresh(), 'comptable');
+        $this->pdfs->publish($user, $order->refresh(), 'ord_ordre', 'Ordre de paiement '.$order->reference);
 
         return $order->refresh();
     }
@@ -280,11 +283,17 @@ class OrdonnancementService
 
     private function activeTotal(Liquidation $liquidation, ?string $exceptId): string
     {
-        $rows = PaymentOrder::query()
-            ->where('liquidation_id', $liquidation->id)
-            ->whereNotIn('status', ['rejected', 'cancelled'])
-            ->when($exceptId !== null, fn ($query) => $query->where('id', '!=', $exceptId))
-            ->pluck('amount_xaf');
+        if ($exceptId === null && $liquidation->relationLoaded('paymentOrders')) {
+            $rows = $liquidation->paymentOrders
+                ->whereNotIn('status', ['rejected', 'cancelled'])
+                ->pluck('amount_xaf');
+        } else {
+            $rows = PaymentOrder::query()
+                ->where('liquidation_id', $liquidation->id)
+                ->whereNotIn('status', ['rejected', 'cancelled'])
+                ->when($exceptId !== null, fn ($query) => $query->where('id', '!=', $exceptId))
+                ->pluck('amount_xaf');
+        }
 
         $total = '0';
         foreach ($rows as $amount) {
